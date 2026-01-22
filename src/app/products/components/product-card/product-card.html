@@ -1,18 +1,22 @@
 <div class="card bg-base-100 shadow-sm animate-fade-in">
-    <a [routerLink]="['/product', 't-shirt']">
+    <a [routerLink]="['/product', product().id]">
         <figure>
-            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            <img [src]="product().imagen_url || 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp'"
+                [alt]="product().nombre" />
         </figure>
         <div class="card-body">
             <h2 class="card-title">
-                Card Title
-                <div class="badge badge-secondary">NEW</div>
+                {{ product().nombre }}
+                @if (product().precio) {
+                <div class="badge badge-secondary">{{ product().precio }}</div>
+                }
             </h2>
-            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+            <p>{{ product().descripcion || 'Sin descripción' }}</p>
+            @if (product().categoria) {
             <div class="card-actions justify-end">
-                <div class="badge badge-outline">Fashion</div>
-                <div class="badge badge-outline">Products</div>
+                <div class="badge badge-outline">{{ product().categoria }}</div>
             </div>
+            }
         </div>
     </a>
 </div>
