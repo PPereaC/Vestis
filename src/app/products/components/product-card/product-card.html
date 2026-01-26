@@ -7,8 +7,8 @@
         <div class="card-body">
             <h2 class="card-title">
                 {{ product().nombre }}
-                @if (product().precio) {
-                <div class="badge badge-secondary">{{ product().precio }}</div>
+                @if (product().precio_base) {
+                <div class="badge badge-secondary">{{ product().precio_base | currency:'EUR' }}</div>
                 }
             </h2>
             <p>{{ product().descripcion || 'Sin descripción' }}</p>
