@@ -1,5 +1,5 @@
 <div class="card shadow-sm animate-fade-in rounded-none h-full border border-transparent hover:border-black transition-all duration-300 scale-90">
-    <a [routerLink]="['/producto', product().id]" class="flex flex-col h-full group">
+    <a [routerLink]="['/producto', product().id]" [queryParams]="{color: product().color_default}" class="flex flex-col h-full group">
         <!-- Sección Imagen -->
         <div class="relative w-full aspect-5/6 bg-[#f5f5f5] overflow-hidden">
             <!-- Icono Corazón -->
@@ -12,7 +12,7 @@
             </button>
 
             <!-- Imagen del producto -->
-            <img [src]="product().imagen_url || 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp'"
+            <img [src]="product().imagen_principal_url || 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp'"
                 [alt]="product().nombre" class="w-full h-full object-cover mix-blend-multiply" />
 
             <!-- Oferta
