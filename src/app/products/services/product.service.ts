@@ -13,7 +13,7 @@ export class ServicioProductos {
             .from('productos')
             .select(`
                 *,
-                variantes(id)
+                variantes(color)
             `);
 
         if (error) {
@@ -21,22 +21,29 @@ export class ServicioProductos {
             return [];
         }
 
-        // Mapear los productos con la imagen principal y cantidad de variantes
-        return (data || []).map(product => ({
-            id: product.id,
-            nombre: product.nombre,
-            descripcion: product.descripcion,
-            marca: product.marca,
-            color_default: product.color_default,
-            categoria: product.categoria,
-            precio_base: product.precio_base,
-            precio_oferta: product.precio_oferta,
-            tiene_oferta: product.tiene_oferta,
-            imagen_principal_url: product.imagen_principal_url,
-            genero: product.genero,
-            fecha_creacion: product.fecha_creacion,
-            cantidadVariantes: Array.isArray(product.variantes) ? product.variantes.length : 0
-        }));
+        // Mapear los productos con la imagen principal y cantidad de colores distintos
+        return (data || []).map(product => {
+            // Contar colores únicos
+            const coloresUnicos = Array.isArray(product.variantes) 
+                ? new Set(product.variantes.map((v: any) => v.color).filter((c: string) => c)).size 
+                : 0;
+
+            return {
+                id: product.id,
+                nombre: product.nombre,
+                descripcion: product.descripcion,
+                marca: product.marca,
+                color_default: product.color_default,
+                categoria: product.categoria,
+                precio_base: product.precio_base,
+                precio_oferta: product.precio_oferta,
+                tiene_oferta: product.tiene_oferta,
+                imagen_principal_url: product.imagen_principal_url,
+                genero: product.genero,
+                fecha_creacion: product.fecha_creacion,
+                cantidadVariantes: coloresUnicos
+            };
+        });
     }
 
     async obtenerProductoPorId(id: string): Promise<Product | null> {
@@ -44,7 +51,7 @@ export class ServicioProductos {
             .from('productos')
             .select(`
                 *,
-                variantes(id)
+                variantes(color)
             `)
             .eq('id', id)
             .single();
@@ -52,6 +59,12 @@ export class ServicioProductos {
             console.error('Error obteniendo producto por ID:', error);
             return null;
         }
+
+        // Contar colores únicos
+        const coloresUnicos = Array.isArray(data.variantes) 
+            ? new Set(data.variantes.map((v: any) => v.color).filter((c: string) => c)).size 
+            : 0;
+
         return {
             id: data.id,
             nombre: data.nombre,
@@ -65,7 +78,7 @@ export class ServicioProductos {
             imagen_principal_url: data.imagen_principal_url,
             genero: data.genero,
             fecha_creacion: data.fecha_creacion,
-            cantidadVariantes: Array.isArray(data.variantes) ? data.variantes.length : 0
+            cantidadVariantes: coloresUnicos
         };
     }
 
