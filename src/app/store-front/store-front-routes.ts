@@ -16,11 +16,11 @@ export const storeFrontRoutes: Routes = [
                 component: HomePage
             },
             {
-                path: 'gender/:gender',
+                path: 'genero/:gender',
                 component: GenderPage
             },
             {
-                path: 'product/:id',
+                path: 'producto/:id',
                 component: ProductPage
             },
             {
