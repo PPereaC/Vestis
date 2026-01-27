@@ -16,7 +16,7 @@ export const storeFrontRoutes: Routes = [
                 component: HomePage
             },
             {
-                path: 'genero/:gender',
+                path: 'genero/:genero',
                 component: GenderPage
             },
             {
