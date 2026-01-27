@@ -5,10 +5,10 @@ import { Product } from '../interfaces/product.interface';
 @Injectable({
     providedIn: 'root'
 })
-export class ProductService {
+export class ServicioProductos {
     private supabaseClient = inject(SupabaseClientService);
 
-    async getProducts(): Promise<Product[]> {
+    async obtenerProductos(): Promise<Product[]> {
         const { data, error } = await this.supabaseClient.supabase
             .from('productos')
             .select(`
