@@ -15,16 +15,17 @@ export class ServicioProductos {
                 *,
                 producto_imagenes!inner(
                     url
-                )
+                ),
+                producto_variantes(id)
             `)
             .eq('producto_imagenes.es_portada', true);
 
         if (error) {
-            console.error('Error fetching products:', error);
+            console.error('Error obteniendo productos:', error);
             return [];
         }
 
-        // Mapear los productos con la imagen de portada
+        // Mapear los productos con la imagen de portada y cantidad de variantes
         return (data || []).map(product => ({
             id: product.id,
             nombre: product.nombre,
@@ -33,7 +34,8 @@ export class ServicioProductos {
             categoria: product.categoria,
             precio_base: product.precio_base,
             created_at: product.created_at,
-            imagen_url: product.producto_imagenes?.[0]?.url
+            imagen_url: product.producto_imagenes?.[0]?.url,
+            cantidadVariantes: Array.isArray(product.producto_variantes) ? product.producto_variantes.length : 0
         }));
     }
 }
