@@ -13,29 +13,29 @@ export class ServicioProductos {
             .from('productos')
             .select(`
                 *,
-                producto_imagenes!inner(
-                    url
-                ),
-                producto_variantes(id)
-            `)
-            .eq('producto_imagenes.es_portada', true);
+                variantes(id)
+            `);
 
         if (error) {
             console.error('Error obteniendo productos:', error);
             return [];
         }
 
-        // Mapear los productos con la imagen de portada y cantidad de variantes
+        // Mapear los productos con la imagen principal y cantidad de variantes
         return (data || []).map(product => ({
             id: product.id,
             nombre: product.nombre,
             descripcion: product.descripcion,
             marca: product.marca,
+            color_default: product.color_default,
             categoria: product.categoria,
             precio_base: product.precio_base,
-            created_at: product.created_at,
-            imagen_url: product.producto_imagenes?.[0]?.url,
-            cantidadVariantes: Array.isArray(product.producto_variantes) ? product.producto_variantes.length : 0
+            precio_oferta: product.precio_oferta,
+            tiene_oferta: product.tiene_oferta,
+            imagen_principal_url: product.imagen_principal_url,
+            genero: product.genero,
+            fecha_creacion: product.fecha_creacion,
+            cantidadVariantes: Array.isArray(product.variantes) ? product.variantes.length : 0
         }));
     }
 
@@ -44,11 +44,7 @@ export class ServicioProductos {
             .from('productos')
             .select(`
                 *,
-                producto_imagenes(
-                    url,
-                    es_portada
-                ),
-                producto_variantes(id)
+                variantes(id)
             `)
             .eq('id', id)
             .single();
@@ -62,40 +58,42 @@ export class ServicioProductos {
             descripcion: data.descripcion,
             marca: data.marca,
             categoria: data.categoria,
+            color_default: data.color_default,
             precio_base: data.precio_base,
-            created_at: data.created_at,
-            imagen_url: data.producto_imagenes.find((img: any) => img.es_portada)?.url || '',
-            cantidadVariantes: Array.isArray(data.producto_variantes) ? data.producto_variantes.length : 0
+            precio_oferta: data.precio_oferta,
+            tiene_oferta: data.tiene_oferta,
+            imagen_principal_url: data.imagen_principal_url,
+            genero: data.genero,
+            fecha_creacion: data.fecha_creacion,
+            cantidadVariantes: Array.isArray(data.variantes) ? data.variantes.length : 0
         };
     }
 
-    async obtenerImagemesDeProducto(productId: string): Promise<string[]> {
+    async obtenerImagenesDeProducto(productId: string, color: string): Promise<string[]> {
         const { data, error } = await this.supabaseClient.supabase
-            .from('producto_imagenes')
-            .select('url')
-            .eq('producto_id', productId);
+            .from('imagenes_variante')
+            .select('url_imagen')
+            .eq('producto_id', productId)
+            .eq('color', color);
         if (error) {
             console.error('Error obteniendo imágenes del producto:', error);
             return [];
         }   
-        return data.map((img: any) => img.url);
+        return data.map((img: any) => img.url_imagen);
     }
 
     async obtenerPortadaProducto(productId: string): Promise<string | null> {
         const { data, error } = await this.supabaseClient.supabase
-            .from('producto_imagenes')
-            .select('url')
-            .eq('producto_id', productId)
-            .eq('es_portada', 'TRUE')
+            .from('productos')
+            .select('imagen_principal_url')
+            .eq('id', productId)
             .single();
-
-            console.log(data);
 
         if (error) {
             console.error('Error obteniendo la imagen de portada del producto:', error);
             return null;
         }
-        return data.url;
+        return data.imagen_principal_url;
     }
 
 }
