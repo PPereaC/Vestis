@@ -1,16 +1,16 @@
 <div class="grid grid-cols-2 gap-32 p-4">
     <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-2 h-190">
 
-        <div class="flex flex-col gap-4 overflow-y-auto custom-scrollbar p-2 h-full">
+        <div class="flex flex-col gap-4 p-2">
             @for (image of imagenesProducto(); track $index) {
-                <div class="h-32 w-32 cursor-pointer border-2 border-gray-300 hover:border-blue-500">
+                <div class="w-full aspect-square h-32 cursor-pointer border-2 border-gray-300 hover:border-blue-500">
                     <img src="{{ image }}" alt="Imagen" class="object-cover w-full h-full" />
                 </div>
             }
         </div>
 
         <div class="h-full overflow-hidden w-130 pt-2 pb-2">
-            <img src="{{ portadaProducto() }}" alt="Imagen" class="object-cover w-full h-full" />
+            <img src="{{ portadaProducto() }}" alt="Imagen" class="object-cover w-full h-full border-2 border-gray-300" />
         </div>
 
     </div>
