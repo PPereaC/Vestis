@@ -19,6 +19,7 @@ export class ProductPage {
   producto = signal<Product | null>(null);
   imagenesProducto = signal<string[]>([]);
   portadaProducto = signal<string | null>(null);
+  imagenesVariantes = signal<string[]>([]);
 
   async ngOnInit() {
 
@@ -32,6 +33,11 @@ export class ProductPage {
 
     const portada = await this.servicioProductos.obtenerPortadaProducto(this.productoId());
     this.portadaProducto.set(portada);
+
+    // Obtención de la imagen principal de cada variante existente del producto
+    const imagenesVariantes = await this.servicioProductos.obtenerImagenPrincipalVariantes(this.productoId());
+    console.log('Imágenes de variantes:', imagenesVariantes);
+    this.imagenesVariantes.set(imagenesVariantes);
 
   }
 

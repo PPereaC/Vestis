@@ -2,15 +2,16 @@
     <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-2 h-190">
 
         <div class="flex flex-col gap-4 p-2">
-            @for (image of imagenesProducto(); track $index) {
-                <div class="w-full aspect-square h-32 cursor-pointer border-2 border-gray-300 hover:border-blue-500">
-                    <img src="{{ image }}" alt="Imagen" class="object-cover w-full h-full" />
-                </div>
+            @for (imagen of imagenesProducto(); track $index) {
+            <div class="w-full aspect-square h-32 cursor-pointer border-2 border-gray-300 hover:border-primary">
+                <img src="{{ imagen }}" alt="Imagen" class="object-cover w-full h-full" />
+            </div>
             }
         </div>
 
         <div class="h-full overflow-hidden w-130 pt-2 pb-2">
-            <img src="{{ portadaProducto() }}" alt="Imagen" class="object-cover w-full h-full border-2 border-gray-300" />
+            <img src="{{ portadaProducto() }}" alt="Imagen"
+                class="object-cover w-full h-full border-2 border-gray-300" />
         </div>
 
     </div>
@@ -69,8 +70,23 @@
             <span class="text-gray-600 text-base pl-3 pt-1.5">IVA incluido</span>
         </div>
 
-        <div class="flex pt-8">
-            <span class="text-black text-sm">Color: </span>
+        <div class="pt-16">
+            <span class="text-black text-sm">Color: <strong class="text-black font-bold">{{ producto()?.color_default
+                    }}</strong></span>
+        </div>
+
+        <div class="flex gap-4 pt-4">
+            @for (imagen of imagenesVariantes(); track $index) {
+            @if (imagen === producto()?.imagen_principal_url) {
+            <div class="w-20 h-25 cursor-pointer border-2 border-primary">
+                <img src="{{ imagen }}" alt="Imagen" class="object-cover w-full h-full" />
+            </div>
+            } @else {
+            <div class="w-20 h-25 cursor-pointer border-2 border-gray-300 hover:border-primary">
+                <img src="{{ imagen }}" alt="Imagen" class="object-cover w-full h-full" />
+            </div>
+            }
+            }
         </div>
 
     </div>
