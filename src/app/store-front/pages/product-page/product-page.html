@@ -3,7 +3,9 @@
 
         <div class="flex flex-col gap-4 overflow-y-auto custom-scrollbar p-2 h-full">
             @for (image of imagenesProducto(); track $index) {
-            <div [ngClass]="[image, imageClass]"></div>
+                <div class="h-32 w-32 cursor-pointer border-2 border-gray-300 hover:border-blue-500">
+                    <img src="{{ image }}" alt="Imagen" class="object-cover w-full h-full" />
+                </div>
             }
         </div>
 
@@ -62,7 +64,8 @@
         </div>
 
         <div class="flex pt-4">
-            <span class="text-red-600 text-2xl font-bold">desde {{ producto()?.precio_base | currency:'EUR':'':'1.2-2' }} €</span>
+            <span class="text-red-600 text-2xl font-bold">desde {{ producto()?.precio_base | currency:'EUR':'':'1.2-2'
+                }} €</span>
             <span class="text-gray-600 text-base pl-3 pt-1.5">IVA incluido</span>
         </div>
 

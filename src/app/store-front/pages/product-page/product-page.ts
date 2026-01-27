@@ -27,7 +27,7 @@ export class ProductPage {
     const data = await this.servicioProductos.obtenerProductoPorId(this.productoId());
     this.producto.set(data);
 
-    const imagenes = await this.servicioProductos.obtenerImagemesDeProducto(this.productoId());
+    const imagenes = await this.servicioProductos.obtenerImagenesDeProducto(this.productoId(), data?.color_default || '');
     this.imagenesProducto.set(imagenes);
 
     const portada = await this.servicioProductos.obtenerPortadaProducto(this.productoId());
