@@ -7,4 +7,5 @@ export interface Product {
   precio_base?: number;
   imagen_url?: string;
   created_at?: string;
+  cantidadVariantes?: number;
 }
