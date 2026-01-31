@@ -22,13 +22,20 @@ export class ProductPage {
   tallas = signal<{talla: string, stock: number}[]>([]);
   tallaSeleccionada = signal<string>('');
   stockTallaSeleccionada = signal<number>(0);
+  imagenSeleccionada = signal<string | null>(null);
 
   async ngOnInit() {
 
     // Scroll arriba del todo al cargar la página
     window.scrollTo(0, 0);
 
+    // Primero se obtiene el ID del producto de la URL
     this.productoId.set(this.route.snapshot.paramMap.get('id') || '');
+    
+    // Poner como imagen seleccionada por defecto la portada del producto
+    const portada = await this.servicioProductos.obtenerPortadaProducto(this.productoId());
+    this.portadaProducto.set(portada);
+    this.imagenSeleccionada.set(portada);
     
     const data = await this.servicioProductos.obtenerProductoPorId(this.productoId());
     this.producto.set(data);
@@ -36,12 +43,8 @@ export class ProductPage {
     const imagenes = await this.servicioProductos.obtenerImagenesDeProducto(this.productoId(), data?.color_default || '');
     this.imagenesProducto.set(imagenes);
 
-    const portada = await this.servicioProductos.obtenerPortadaProducto(this.productoId());
-    this.portadaProducto.set(portada);
-
     // Obtención de la imagen principal de cada variante existente del producto
     const imagenesVariantes = await this.servicioProductos.obtenerImagenPrincipalVariantes(this.productoId());
-    console.log('Imágenes de variantes:', imagenesVariantes);
     this.imagenesVariantes.set(imagenesVariantes);
 
     // Coger color de la url
@@ -79,6 +82,10 @@ export class ProductPage {
     } else {
       return `¡Solo quedan ${stock} unidades disponibles!`;
     }
+  }
+
+  cambiarImagen(imagenUrl: string): void {
+    this.imagenSeleccionada.set(imagenUrl);
   }
 
   images = this.imagenesProducto;

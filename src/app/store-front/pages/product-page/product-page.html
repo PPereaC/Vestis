@@ -4,13 +4,13 @@
         <div class="flex flex-col gap-4 p-2">
             @for (imagen of imagenesProducto(); track $index) {
             <div class="w-full aspect-square h-32 cursor-pointer border-2 border-gray-300 hover:border-primary">
-                <img src="{{ imagen }}" alt="Imagen" class="object-cover w-full h-full" />
+                <img (mouseenter)="cambiarImagen(imagen)" src="{{ imagen }}" alt="Imagen" class="object-cover w-full h-full" />
             </div>
             }
         </div>
 
         <div class="h-full overflow-hidden w-130 pt-2 pb-2">
-            <img src="{{ portadaProducto() }}" alt="Imagen"
+            <img src="{{ imagenSeleccionada() }}" alt="Imagen"
                 class="object-cover w-full h-full border-2 border-gray-300" />
         </div>
 
