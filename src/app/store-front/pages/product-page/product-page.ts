@@ -25,6 +25,9 @@ export class ProductPage {
 
   async ngOnInit() {
 
+    // Scroll arriba del todo al cargar la página
+    window.scrollTo(0, 0);
+
     this.productoId.set(this.route.snapshot.paramMap.get('id') || '');
     
     const data = await this.servicioProductos.obtenerProductoPorId(this.productoId());
