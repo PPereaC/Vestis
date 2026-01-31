@@ -157,4 +157,20 @@ export class ServicioProductos {
         return primerasImagenes;
     }
 
+    async obtenerTallaProducto(productoId: string, color: string): Promise<{talla: string, stock: number}[]> {
+
+        const { data, error } = await this.supabaseClient.supabase
+            .from('variantes')
+            .select('talla, stock')
+            .eq('producto_id', productoId)
+            .eq('color', color);
+
+        if (error) {
+            console.error('Error intentando obtener las tallas del producto: ', error);
+            return [];
+        }
+
+        return data.map((item: any) => ({ talla: item.talla, stock: item.stock || 0 }));
+    }
+
 }
