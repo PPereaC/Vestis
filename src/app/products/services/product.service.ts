@@ -83,16 +83,38 @@ export class ServicioProductos {
     }
 
     async obtenerImagenesDeProducto(productId: string, color: string): Promise<string[]> {
+        // Primero obtener la portada del producto
+        const { data: producto, error: errorProducto } = await this.supabaseClient.supabase
+            .from('productos')
+            .select('imagen_principal_url')
+            .eq('id', productId)
+            .single();
+
+        if (errorProducto) {
+            console.error('Error obteniendo portada del producto:', errorProducto);
+        }
+
+        // Luego obtener las demás imágenes de la variante
         const { data, error } = await this.supabaseClient.supabase
             .from('imagenes_variante')
             .select('url_imagen')
             .eq('producto_id', productId)
             .eq('color', color);
+
         if (error) {
             console.error('Error obteniendo imágenes del producto:', error);
-            return [];
-        }   
-        return data.map((img: any) => img.url_imagen);
+            return producto?.imagen_principal_url ? [producto.imagen_principal_url] : [];
+        }
+
+        const imagenesVariante = data.map((img: any) => img.url_imagen);
+        
+        // Si tenemos portada, ponerla al inicio y eliminar duplicados
+        if (producto?.imagen_principal_url) {
+            const imagenesSinDuplicados = imagenesVariante.filter((url: string) => url !== producto.imagen_principal_url);
+            return [producto.imagen_principal_url, ...imagenesSinDuplicados];
+        }
+
+        return imagenesVariante;
     }
 
     async obtenerPortadaProducto(productId: string): Promise<string | null> {
