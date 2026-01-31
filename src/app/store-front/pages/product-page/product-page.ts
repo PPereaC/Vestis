@@ -1,5 +1,4 @@
 import { Component, inject, signal } from '@angular/core';
-import { NgClass } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ServicioProductos } from '@products/services/product.service';
 import { Product } from '@products/interfaces/product.interface';
@@ -7,7 +6,7 @@ import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-product-page',
-  imports: [NgClass, CurrencyPipe],
+  imports: [CurrencyPipe],
   templateUrl: './product-page.html',
 })
 export class ProductPage {
