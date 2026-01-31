@@ -19,6 +19,9 @@ export class ProductPage {
   imagenesProducto = signal<string[]>([]);
   portadaProducto = signal<string | null>(null);
   imagenesVariantes = signal<string[]>([]);
+  tallas = signal<{talla: string, stock: number}[]>([]);
+  tallaSeleccionada = signal<string>('');
+  stockTallaSeleccionada = signal<number>(0);
 
   async ngOnInit() {
 
@@ -38,6 +41,41 @@ export class ProductPage {
     console.log('Imágenes de variantes:', imagenesVariantes);
     this.imagenesVariantes.set(imagenesVariantes);
 
+    // Coger color de la url
+    const color = this.route.snapshot.queryParamMap.get('color');
+    
+    // Obtención de las tallas del producto
+    const tallasProducto = await this.servicioProductos.obtenerTallaProducto(this.productoId(), color!);
+    
+    // Comprobar si la talla es por número, si es por número ordenar de menor a mayor
+    if (tallasProducto.length > 0 && !isNaN(Number(tallasProducto[0].talla))) {
+      tallasProducto.sort((a, b) => Number(a.talla) - Number(b.talla));
+    }
+
+    this.tallas.set(tallasProducto);
+
+  }
+
+  onTallaChange(event: Event): void {
+    const select = event.target as HTMLSelectElement;
+    const talla = select.value;
+    this.tallaSeleccionada.set(talla);
+    
+    const tallaEncontrada = this.tallas().find(t => t.talla === talla);
+    this.stockTallaSeleccionada.set(tallaEncontrada?.stock || 0);
+  }
+
+  mostrarAlertaStock(): boolean {
+    return this.tallaSeleccionada() !== '' && this.stockTallaSeleccionada() > 0 && this.stockTallaSeleccionada() < 5;
+  }
+
+  obtenerMensajeAlertaStock(): string {
+    const stock = this.stockTallaSeleccionada();
+    if (stock === 1) {
+      return '¡Solo queda 1 unidad disponible!';
+    } else {
+      return `¡Solo quedan ${stock} unidades disponibles!`;
+    }
   }
 
   images = this.imagenesProducto;
