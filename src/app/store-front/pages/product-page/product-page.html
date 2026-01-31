@@ -3,7 +3,8 @@
 
         <div class="flex flex-col gap-4 p-2">
             @for (imagen of imagenesProducto(); track $index) {
-            <div class="w-full aspect-square h-32 cursor-pointer border-2 border-gray-300 hover:border-primary">
+            <div class="w-full aspect-square h-32 cursor-pointer"
+                 [class]="imagen === imagenSeleccionada() ? 'border-[2px] border-black' : 'border-[1.5px] border-gray-400'">
                 <img (mouseenter)="cambiarImagen(imagen)" src="{{ imagen }}" alt="Imagen" class="object-cover w-full h-full" />
             </div>
             }
@@ -11,7 +12,7 @@
 
         <div class="h-full overflow-hidden w-130 pt-2 pb-2">
             <img src="{{ imagenSeleccionada() }}" alt="Imagen"
-                class="object-cover w-full h-full border-2 border-gray-300" />
+                class="object-cover w-full h-full border-[1.5px] border-gray-400" />
         </div>
 
     </div>
@@ -80,11 +81,11 @@
         <div class="flex gap-4 pt-4 pb-8">
             @for (imagen of imagenesVariantes(); track $index) {
             @if (imagen === producto()?.imagen_principal_url) {
-            <div class="w-20 h-25 cursor-pointer border-2 border-primary">
+            <div class="w-20 h-25 cursor-pointer border-2 border-black">
                 <img src="{{ imagen }}" alt="Imagen" class="object-cover w-full h-full" />
             </div>
             } @else {
-            <div class="w-20 h-25 cursor-pointer border-2 border-gray-300 hover:border-primary">
+            <div class="w-20 h-25 cursor-pointer border-2 border-gray-300 hover:border-black">
                 <img src="{{ imagen }}" alt="Imagen" class="object-cover w-full h-full" />
             </div>
             }
