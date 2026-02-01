@@ -94,7 +94,7 @@
 
         <!-- Selector de talla -->
         <div class="pt-4">
-            <select class="select select-accent w-full" (change)="onTallaChange($event)">
+            <select class="select w-full border border-black focus:border-black focus:outline-none" (change)="onTallaChange($event)">
                 <option selected disabled>Elige una talla</option>
                 @for (item of tallas(); track $index) {
                 <option value="{{ item.talla }}" [disabled]="item.stock === 0">
