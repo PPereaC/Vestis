@@ -46,6 +46,45 @@ export class ServicioProductos {
         });
     }
 
+    async obtenerProductosPorGenero(genero: string): Promise<Product[]> {
+        const { data, error } = await this.supabaseClient.supabase
+            .from('productos')
+            .select(`
+                *,
+                variantes(color)
+            `)
+            .eq('genero', genero);
+
+        if (error) {
+            console.error('Error obteniendo productos:', error);
+            return [];
+        }
+
+        // Mapear los productos con la imagen principal y cantidad de colores distintos
+        return (data || []).map(product => {
+            // Contar colores únicos
+            const coloresUnicos = Array.isArray(product.variantes) 
+                ? new Set(product.variantes.map((v: any) => v.color).filter((c: string) => c)).size 
+                : 0;
+
+            return {
+                id: product.id,
+                nombre: product.nombre,
+                descripcion: product.descripcion,
+                marca: product.marca,
+                color_default: product.color_default,
+                categoria: product.categoria,
+                precio_base: product.precio_base,
+                precio_oferta: product.precio_oferta,
+                tiene_oferta: product.tiene_oferta,
+                imagen_principal_url: product.imagen_principal_url,
+                genero: product.genero,
+                fecha_creacion: product.fecha_creacion,
+                cantidadVariantes: coloresUnicos
+            };
+        });
+    }
+
     async obtenerProductoPorId(id: string): Promise<Product | null> {
         const { data, error } = await this.supabaseClient.supabase
             .from('productos')
