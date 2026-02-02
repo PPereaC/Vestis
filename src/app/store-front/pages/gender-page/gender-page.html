@@ -1,4 +1,4 @@
-<h1 class="text-3xl font-bold font-montserrat pb-4 pt-4 pl-4">Zapatillas deportivas de hombre</h1>
+<h1 class="text-3xl font-bold font-montserrat pb-4 pt-4 pl-4">Zapatillas deportivas de {{ genero() }}</h1>
 
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-2 gap-0">
     @for (producto of productos(); track producto.id) {
