@@ -4,7 +4,7 @@
         <div class="flex flex-col gap-4 p-2">
             @for (imagen of imagenesProducto(); track $index) {
             <div class="w-full aspect-square h-32 cursor-pointer"
-                 [class]="imagen === imagenSeleccionada() ? 'border-[2px] border-black' : 'border-[1.5px] border-gray-400'">
+                 [class]="imagen === imagenSeleccionada() ? 'border-2 border-black' : 'border-[1.5px] border-gray-400'">
                 <img (mouseenter)="cambiarImagen(imagen)" src="{{ imagen }}" alt="Imagen" class="object-cover w-full h-full" />
             </div>
             }
@@ -128,7 +128,7 @@
             <button class="btn bg-black text-white border-black flex-8">
                 Añadir a la cesta
             </button>
-            <button class="btn btn-square flex-1 border-black border-1">
+            <button class="btn btn-square flex-1 border-black border">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
