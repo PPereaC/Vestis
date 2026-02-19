@@ -1,0 +1,289 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Nike Performance",
+            "descripcion": "PEGASUS 41 - Zapatillas running asfalto",
+            "precio_base": 139.95,
+            "precio_oferta": 109.95,
+            "tiene_oferta": true,
+            "imagen_principal_url": "https://img01.ztat.net/article/spp-media-p1/81091efbfa984d589657841a6d94ab47/70bf110e388a4e5883b9943d27d145a5.jpg?imwidth=1800\u0026filter=packshot",
+            "categoria": "Deportiva Running",
+            "marca": "Nike",
+            "genero": "Hombre",
+            "fecha_creacion": "2026-01-27 21:41:54.644066",
+            "color_default": "off-white, gold-coloured"
+        },
+        {
+            "id": 2,
+            "nombre": "Adidas Performance",
+            "descripcion": "GALAXY 7 - Zapatillas running asfalto - footwear",
+            "precio_base": 54.95,
+            "precio_oferta": null,
+            "tiene_oferta": false,
+            "imagen_principal_url": "https://img01.ztat.net/article/spp-media-p1/a6ea585606504969a4acc97223576c71/00ea77ec18224e5088b0889b75672c1b.jpg?imwidth=1800\u0026filter=packshot",
+            "categoria": "Deportiva Running",
+            "marca": "Adidas",
+            "genero": "Mujer",
+            "fecha_creacion": "2026-02-02 15:19:04.124718",
+            "color_default": "footwear white/clear pink/core black"
+        }
+    ],
+    "imagenes_variante": [
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/0e936734074f4c27b4e71b738fb4dd9c/cceb356b861e44dabbe237289699f864.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/0c1e1d8091b4481883200ac13679d897/dece3c48321c4f16bfc060b45d80e4ae.jpg?imwidth=1800\u0026filter=packshot"
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/f6e53a6e49dd4702888b9d39a6b5aca1/bc41592912384bffa9e4eeea23492c70.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/f2f82b7f0a8f4771860f4ce8995467ad/10e134f1f8bc4d2ba6fa566fe4368011.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/8b3ec529d8334fed834ddd6cea8776fd/e7c3bbd4601b4c7dac54a6c0fb86dc48.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/794fb5e636394f138010373e622f60f8/5aacde7307c34ded996ebc8dba1389d2.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/3b1a2658b78d49919d66313bef344c50/868058881eb64eacbb03ec21863abd22.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/b0454ee62746406b8c5a656b35c0f9f4/07ae07c971324f7ea9d18ca8025bda38.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/a6ea585606504969a4acc97223576c71/00ea77ec18224e5088b0889b75672c1b.jpg?imwidth=1800\u0026filter=packshot"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/83705d9a83de44aaa9fabe160ba6e7f7/b58c62fac8a846f9b3ff052c4bcabfa6.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/3dc8c2df78744c559d2acade7b83fc33/846b6fc2931f43178e4875bf7cabe81b.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/8f80b97df8f54484bb23d61d25edd424/cbe442a1ab9c4b4aa44f8fd2a992aef3.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/a220289163f94cc9815439319aac4a4e/6dd36efc826f46e2a3a2999165ac88af.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/c8427b251c7847229e94201ed105ce5d/432944ae7ae24669a27ec16b99158661.jpg?imwidth=1800\u0026filter=packshot"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/8111c358a6de45b78b2f5c18eb0bab3c/6508a77e0e84459fbbd4712444bfea67.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/58fd74b3b04e41b69291661510792b8b/ec2e55fad10843029f26ba52fe2f6e95.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/fab1cbcd23544305a7b7b58b9e6253d6/aa021c99650b43659ce4a011a3958d4f.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/a34790b33e38407883fe3e3ab3797cb5/455ead1d9ed54a7d96b4c69b46f040a7.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/e3ed96dc5ea548fbabeae9e7d8ec6831/51ccbdd54c8c447981143044a6c78f3a.jpg?imwidth=1800\u0026filter=packshot"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/3ad04a184e0b495d9e33d1f42977308b/cd0fb0bd572d485f829ab36037325b75.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/79f5690cef644e27bceba689f35e25fb/d8295b9f783f4003b6e1aa657f23151f.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/fd5fdf47d883419780bffbadb577e1e0/67e86e98948c470f9f4797d37a263422.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/c54e344c85114b66af58000422affef8/3a797a4ca30444e4bdcee7f18dbdd6b8.jpg?imwidth=1800"
+        }
+    ],
+    "variantes": [
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "talla": "42",
+            "stock": 1
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "talla": "43",
+            "stock": 3
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "talla": "40",
+            "stock": 12
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "talla": "41",
+            "stock": 8
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "talla": "43",
+            "stock": 7
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "36",
+            "stock": 2
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "37",
+            "stock": 6
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "38",
+            "stock": 8
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "39",
+            "stock": 3
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "40",
+            "stock": 6
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "41",
+            "stock": 8
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "talla": "37",
+            "stock": 3
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "talla": "38",
+            "stock": 6
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "talla": "40",
+            "stock": 8
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "37",
+            "stock": 5
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "38",
+            "stock": 4
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "39",
+            "stock": 6
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "40",
+            "stock": 0
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "41",
+            "stock": 9
+        }
+    ]
+}

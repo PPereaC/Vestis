@@ -1,155 +1,129 @@
 import { Injectable, inject } from '@angular/core';
-import { SupabaseClientService } from '../../core/services/supabase-client.service';
+import { HttpClient } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
 import { Product } from '../interfaces/product.interface';
+
+interface CatalogoData {
+    productos: Array<{
+        id: number | string;
+        nombre: string;
+        descripcion?: string;
+        marca?: string;
+        color_default?: string;
+        categoria?: string;
+        precio_base: number;
+        precio_oferta?: number;
+        tiene_oferta: boolean;
+        imagen_principal_url?: string;
+        genero?: string;
+        fecha_creacion: string;
+    }>;
+    imagenes_variante: Array<{
+        producto_id: number | string;
+        color: string;
+        url_imagen: string;
+    }>;
+    variantes: Array<{
+        producto_id: number | string;
+        color: string;
+        talla: string;
+        stock: number;
+    }>;
+}
 
 @Injectable({
     providedIn: 'root'
 })
 export class ServicioProductos {
-    private supabaseClient = inject(SupabaseClientService);
+    private http = inject(HttpClient);
+    private readonly catalogoUrl = '/data/catalogo.json';
+    private catalogoCache: CatalogoData | null = null;
 
-    async obtenerProductos(): Promise<Product[]> {
-        const { data, error } = await this.supabaseClient.supabase
-            .from('productos')
-            .select(`
-                *,
-                variantes(color)
-            `);
-
-        if (error) {
-            console.error('Error obteniendo productos:', error);
-            return [];
+    private async cargarCatalogo(): Promise<CatalogoData> {
+        if (this.catalogoCache) {
+            return this.catalogoCache;
         }
 
-        // Mapear los productos con la imagen principal y cantidad de colores distintos
-        return (data || []).map(product => {
-            // Contar colores únicos
-            const coloresUnicos = Array.isArray(product.variantes) 
-                ? new Set(product.variantes.map((v: any) => v.color).filter((c: string) => c)).size 
-                : 0;
+        try {
+            this.catalogoCache = await firstValueFrom(
+                this.http.get<CatalogoData>(this.catalogoUrl)
+            );
+        } catch (error) {
+            console.error('Error cargando el catalogo local:', error);
+            this.catalogoCache = { productos: [], imagenes_variante: [], variantes: [] };
+        }
 
-            return {
-                id: product.id,
-                nombre: product.nombre,
-                descripcion: product.descripcion,
-                marca: product.marca,
-                color_default: product.color_default,
-                categoria: product.categoria,
-                precio_base: product.precio_base,
-                precio_oferta: product.precio_oferta,
-                tiene_oferta: product.tiene_oferta,
-                imagen_principal_url: product.imagen_principal_url,
-                genero: product.genero,
-                fecha_creacion: product.fecha_creacion,
-                cantidadVariantes: coloresUnicos
-            };
-        });
+        return this.catalogoCache;
     }
 
-    async obtenerProductosPorGenero(genero: string): Promise<Product[]> {
-        const { data, error } = await this.supabaseClient.supabase
-            .from('productos')
-            .select(`
-                *,
-                variantes(color)
-            `)
-            .eq('genero', genero);
+    private contarColoresUnicos(variantes: CatalogoData['variantes'], productId: string): number {
+        const colores = variantes
+            .filter((v) => String(v.producto_id) === productId && v.color)
+            .map((v) => v.color);
 
-        if (error) {
-            console.error('Error obteniendo productos:', error);
-            return [];
-        }
-
-        // Mapear los productos con la imagen principal y cantidad de colores distintos
-        return (data || []).map(product => {
-            // Contar colores únicos
-            const coloresUnicos = Array.isArray(product.variantes) 
-                ? new Set(product.variantes.map((v: any) => v.color).filter((c: string) => c)).size 
-                : 0;
-
-            return {
-                id: product.id,
-                nombre: product.nombre,
-                descripcion: product.descripcion,
-                marca: product.marca,
-                color_default: product.color_default,
-                categoria: product.categoria,
-                precio_base: product.precio_base,
-                precio_oferta: product.precio_oferta,
-                tiene_oferta: product.tiene_oferta,
-                imagen_principal_url: product.imagen_principal_url,
-                genero: product.genero,
-                fecha_creacion: product.fecha_creacion,
-                cantidadVariantes: coloresUnicos
-            };
-        });
+        return new Set(colores).size;
     }
 
-    async obtenerProductoPorId(id: string): Promise<Product | null> {
-        const { data, error } = await this.supabaseClient.supabase
-            .from('productos')
-            .select(`
-                *,
-                variantes(color)
-            `)
-            .eq('id', id)
-            .single();
-        if (error) {
-            console.error('Error obteniendo producto por ID:', error);
-            return null;
-        }
-
-        // Contar colores únicos
-        const coloresUnicos = Array.isArray(data.variantes) 
-            ? new Set(data.variantes.map((v: any) => v.color).filter((c: string) => c)).size 
-            : 0;
-
+    private mapProduct(product: CatalogoData['productos'][number], variantes: CatalogoData['variantes']): Product {
         return {
-            id: data.id,
-            nombre: data.nombre,
-            descripcion: data.descripcion,
-            marca: data.marca,
-            categoria: data.categoria,
-            color_default: data.color_default,
-            precio_base: data.precio_base,
-            precio_oferta: data.precio_oferta,
-            tiene_oferta: data.tiene_oferta,
-            imagen_principal_url: data.imagen_principal_url,
-            genero: data.genero,
-            fecha_creacion: data.fecha_creacion,
-            cantidadVariantes: coloresUnicos
+            id: Number(product.id),
+            nombre: product.nombre,
+            descripcion: product.descripcion,
+            marca: product.marca,
+            color_default: product.color_default,
+            categoria: product.categoria,
+            precio_base: product.precio_base,
+            precio_oferta: product.precio_oferta,
+            tiene_oferta: product.tiene_oferta,
+            imagen_principal_url: product.imagen_principal_url,
+            genero: product.genero as Product['genero'],
+            fecha_creacion: product.fecha_creacion,
+            cantidadVariantes: this.contarColoresUnicos(variantes, String(product.id))
         };
     }
 
+    private normalizarTexto(texto: string): string {
+        return texto
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '');
+    }
+
+    async obtenerProductos(): Promise<Product[]> {
+        const catalogo = await this.cargarCatalogo();
+        return catalogo.productos.map((product) => this.mapProduct(product, catalogo.variantes));
+    }
+
+    async obtenerProductosPorGenero(genero: string): Promise<Product[]> {
+        const catalogo = await this.cargarCatalogo();
+        const generoNormalizado = this.normalizarTexto(genero);
+
+        return catalogo.productos
+            .filter((p) => this.normalizarTexto(p.genero || '') === generoNormalizado)
+            .map((product) => this.mapProduct(product, catalogo.variantes));
+    }
+
+    async obtenerProductoPorId(id: string): Promise<Product | null> {
+        const catalogo = await this.cargarCatalogo();
+        const product = catalogo.productos.find((p) => String(p.id) === String(id));
+
+        if (!product) {
+            return null;
+        }
+
+        return this.mapProduct(product, catalogo.variantes);
+    }
+
     async obtenerImagenesDeProducto(productId: string, color: string): Promise<string[]> {
-        // Primero obtener la portada del producto
-        const { data: producto, error: errorProducto } = await this.supabaseClient.supabase
-            .from('productos')
-            .select('imagen_principal_url')
-            .eq('id', productId)
-            .single();
+        const catalogo = await this.cargarCatalogo();
+        const producto = catalogo.productos.find((p) => String(p.id) === String(productId));
 
-        if (errorProducto) {
-            console.error('Error obteniendo portada del producto:', errorProducto);
-        }
+        const imagenesVariante = catalogo.imagenes_variante
+            .filter((img) => String(img.producto_id) === String(productId) && img.color === color)
+            .map((img) => img.url_imagen);
 
-        // Luego obtener las demás imágenes de la variante
-        const { data, error } = await this.supabaseClient.supabase
-            .from('imagenes_variante')
-            .select('url_imagen')
-            .eq('producto_id', productId)
-            .eq('color', color);
-
-        if (error) {
-            console.error('Error obteniendo imágenes del producto:', error);
-            return producto?.imagen_principal_url ? [producto.imagen_principal_url] : [];
-        }
-
-        const imagenesVariante = data.map((img: any) => img.url_imagen);
-        
-        // Si tenemos portada, ponerla al inicio y eliminar duplicados
         if (producto?.imagen_principal_url) {
-            const imagenesSinDuplicados = imagenesVariante.filter((url: string) => url !== producto.imagen_principal_url);
+            const imagenesSinDuplicados = imagenesVariante.filter((url) => url !== producto.imagen_principal_url);
             return [producto.imagen_principal_url, ...imagenesSinDuplicados];
         }
 
@@ -157,58 +131,27 @@ export class ServicioProductos {
     }
 
     async obtenerPortadaProducto(productId: string): Promise<string | null> {
-        const { data, error } = await this.supabaseClient.supabase
-            .from('productos')
-            .select('imagen_principal_url')
-            .eq('id', productId)
-            .single();
-
-        if (error) {
-            console.error('Error obteniendo la imagen de portada del producto:', error);
-            return null;
-        }
-        return data.imagen_principal_url;
+        const catalogo = await this.cargarCatalogo();
+        const producto = catalogo.productos.find((p) => String(p.id) === String(productId));
+        return producto?.imagen_principal_url || null;
     }
 
     async obtenerImagenPrincipalVariantes(productId: string): Promise<string[]> {
+        const catalogo = await this.cargarCatalogo();
+        const producto = catalogo.productos.find((p) => String(p.id) === String(productId));
+        const imagenes = catalogo.imagenes_variante.filter((img) => String(img.producto_id) === String(productId));
 
-        // Obtener la imagen principal y el color por defecto del producto
-        const { data: producto, error: errorProducto } = await this.supabaseClient.supabase
-            .from('productos')
-            .select('imagen_principal_url, color_default')
-            .eq('id', productId)
-            .single();
-
-        if (errorProducto) {
-            console.error('Error obteniendo imagen principal del producto:', errorProducto);
-        }
-
-        // Obtener las imágenes de las variantes
-        const { data, error } = await this.supabaseClient.supabase
-            .from('imagenes_variante')
-            .select('url_imagen, color')
-            .eq('producto_id', productId);
-
-        if (error) {
-            console.error('Error obteniendo la imagen principal de la variante:', error);
-            return producto?.imagen_principal_url ? [producto.imagen_principal_url] : [];
-        }
-
-        // Agrupar por color y tomar la primera imagen de cada color
         const coloresVistos = new Set<string>();
         const primerasImagenes: string[] = [];
 
-        // Agregar primero la imagen principal del producto
         if (producto?.imagen_principal_url) {
             primerasImagenes.push(producto.imagen_principal_url);
-            // Marcar el color por defecto como visto para evitar duplicados
             if (producto.color_default) {
                 coloresVistos.add(producto.color_default);
             }
         }
 
-        // Agregar las primeras imágenes de cada color (excluyendo el color por defecto ya agregado)
-        for (const imagen of data) {
+        for (const imagen of imagenes) {
             if (imagen.color && !coloresVistos.has(imagen.color)) {
                 coloresVistos.add(imagen.color);
                 primerasImagenes.push(imagen.url_imagen);
@@ -218,20 +161,10 @@ export class ServicioProductos {
         return primerasImagenes;
     }
 
-    async obtenerTallaProducto(productoId: string, color: string): Promise<{talla: string, stock: number}[]> {
-
-        const { data, error } = await this.supabaseClient.supabase
-            .from('variantes')
-            .select('talla, stock')
-            .eq('producto_id', productoId)
-            .eq('color', color);
-
-        if (error) {
-            console.error('Error intentando obtener las tallas del producto: ', error);
-            return [];
-        }
-
-        return data.map((item: any) => ({ talla: item.talla, stock: item.stock || 0 }));
+    async obtenerTallaProducto(productoId: string, color: string): Promise<{ talla: string, stock: number }[]> {
+        const catalogo = await this.cargarCatalogo();
+        return catalogo.variantes
+            .filter((item) => String(item.producto_id) === String(productoId) && item.color === color)
+            .map((item) => ({ talla: item.talla, stock: item.stock || 0 }));
     }
-
 }
