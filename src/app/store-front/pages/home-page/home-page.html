@@ -1,46 +1,37 @@
-<!-- ═══════════════════════════════════════════════════════════════════
-     HERO — Full-screen slider + marquee integrado
-     ═══════════════════════════════════════════════════════════════════ -->
 <section class="relative h-[100vh] overflow-hidden bg-gray-950"
     style="width: 100vw; margin-left: calc(-50vw + 50%); margin-top: -1rem;">
 
-    @for (slide of heroSlides; track $index) {
     <div class="absolute inset-0 transition-opacity duration-700 ease-in-out"
-        [class.opacity-100]="currentSlide === $index"
-        [class.opacity-0]="currentSlide !== $index">
-        <img [src]="slide.imagen" [alt]="slide.alt"
-            class="w-full h-full object-cover scale-105" />
+        class.opacity-100="currentSlide === $index" class.opacity-0="currentSlide !== $index">
+        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?q=80&w=1374&auto=format&fit=crop"
+            alt="Running Collection" class="w-full h-full object-cover scale-105" />
     </div>
-    }
 
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10"></div>
 
-    <!-- Marquee de marcas — logos de internet (Simple Icons CDN) -->
-    <div class="absolute top-0 left-0 right-0 z-10 bg-black/40 backdrop-blur-sm border-b border-white/10 py-4 overflow-hidden">
+    <!-- Marquee de marcas -->
+    <div
+        class="absolute top-0 left-0 right-0 z-10 bg-black/40 backdrop-blur-sm border-b border-white/10 py-4 overflow-hidden cursor-pointer">
         <div class="flex items-center gap-16 animate-[marquee_30s_linear_infinite] whitespace-nowrap px-4">
-            @for (brand of brandLogos; track brand.logoUrl) {
+            @for (marca of logosMarcas; track marca.logoUrl) {
             <div class="group inline-flex items-center gap-3 shrink-0">
-                <img
-                    [src]="brand.logoUrl"
-                    [alt]="brand.name + ' logo'"
+                <img [src]="marca.logoUrl" [alt]="marca.name + ' logo'"
                     class="h-6 md:h-7 w-auto shrink-0 opacity-55 group-hover:opacity-95 transition-opacity duration-300"
-                    loading="lazy"
-                    decoding="async" />
-                <span class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-white/50 group-hover:text-white/85 transition-colors duration-300">
-                    {{ brand.name }}
+                    loading="lazy" decoding="async" />
+                <span
+                    class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-white/50 group-hover:text-white/85 transition-colors duration-300">
+                    {{ marca.name }}
                 </span>
             </div>
             }
-            @for (brand of brandLogos; track $index) {
+            @for (marca of logosMarcas; track $index) {
             <div class="group inline-flex items-center gap-3 shrink-0">
-                <img
-                    [src]="brand.logoUrl"
-                    [alt]="brand.name + ' logo'"
+                <img [src]="marca.logoUrl" [alt]="marca.name + ' logo'"
                     class="h-6 md:h-7 w-auto shrink-0 opacity-55 group-hover:opacity-95 transition-opacity duration-300"
-                    loading="lazy"
-                    decoding="async" />
-                <span class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-white/50 group-hover:text-white/85 transition-colors duration-300">
-                    {{ brand.name }}
+                    loading="lazy" decoding="async" />
+                <span
+                    class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-white/50 group-hover:text-white/85 transition-colors duration-300">
+                    {{ marca.name }}
                 </span>
             </div>
             }
@@ -50,15 +41,16 @@
     <!-- Contenido hero -->
     <div class="relative h-full flex flex-col justify-end pb-52 px-8 lg:px-20">
         <div class="max-w-3xl">
-            <span class="inline-block border border-orange-500 text-orange-400 text-xs font-bold tracking-[0.25em] uppercase px-4 py-1.5 mb-6 ml-2 bg-orange-500 text-white">
+            <span
+                class="inline-block border border-orange-500 text-orange-400 text-xs font-bold tracking-[0.25em] uppercase px-4 py-1.5 mb-6 ml-2 bg-orange-500 text-white">
                 Primavera / Verano 2026
             </span>
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
-                Mueve tu<br/>
-                <span class="text-orange-500">mundo.</span>
+                El sudor<br />
+                <span class="text-orange-500">no miente.</span>
             </h1>
             <p class="text-lg text-gray-300 mt-6 max-w-lg leading-relaxed">
-                Ropa y calzado deportivo diseñados para quienes hacen de cada día una conquista.
+                Ni la ropa que llevas cuando nadie te ve. Prepara tu equipo para los días difíciles.
             </p>
 
             <div class="flex items-center gap-6 mt-10">
@@ -72,33 +64,10 @@
                 </a>
             </div>
         </div>
-
-        <!-- Slide controls -->
-        <div class="absolute bottom-24 right-8 lg:right-20 flex items-center gap-4">
-            <button (click)="prevSlide()"
-                class="w-12 h-12 border border-white/30 hover:border-white text-white/60 hover:text-white flex items-center justify-center transition-all duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m15 18-6-6 6-6" />
-                </svg>
-            </button>
-            <span class="text-white/50 text-sm font-mono">
-                {{ currentSlide + 1 }}<span class="mx-1">/</span>{{ heroSlides.length }}
-            </span>
-            <button (click)="nextSlide()"
-                class="w-12 h-12 border border-white/30 hover:border-white text-white/60 hover:text-white flex items-center justify-center transition-all duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m9 18 6-6-6-6" />
-                </svg>
-            </button>
-        </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     CATEGORÍAS — Tarjetas horizontales tipo magazine
-     ═══════════════════════════════════════════════════════════════════ -->
+<!-- CATEGORÍAS — Tarjetas horizontales -->
 <section class="py-20">
     <div class="flex items-center justify-between mb-12">
         <h2 class="text-3xl font-bold text-gray-900 tracking-tight">Compra por género</h2>
@@ -107,8 +76,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         @for (cat of categorias; track $index) {
-        <a [routerLink]="cat.link"
-            class="group relative overflow-hidden bg-gray-100 aspect-[4/5]">
+        <a [routerLink]="cat.link" class="group relative overflow-hidden bg-gray-100 aspect-[4/5]">
             <img [src]="cat.imagen" [alt]="cat.titulo"
                 class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[600ms] ease-out" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"></div>
@@ -117,9 +85,9 @@
                 <div class="flex items-end justify-between">
                     <div>
                         <h3 class="text-2xl font-bold text-white">{{ cat.titulo }}</h3>
-                        <p class="text-white/50 text-sm mt-1">{{ cat.numProductos }} productos</p>
                     </div>
-                    <div class="w-10 h-10 bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-orange-600 transition-colors duration-300">
+                    <div
+                        class="w-10 h-10 bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-orange-600 transition-colors duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M7 17 17 7" />
@@ -133,9 +101,6 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     BENTO GRID — Layout asimétrico de colecciones
-     ═══════════════════════════════════════════════════════════════════ -->
 <section class="py-20">
     <div class="flex items-center justify-between mb-12">
         <h2 class="text-3xl font-bold text-gray-900 tracking-tight">Destacados</h2>
@@ -143,9 +108,8 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-[280px]">
-        @for (item of bentoItems; track $index) {
-        <a [routerLink]="item.link"
-            class="group relative overflow-hidden"
+        @for (item of destacados; track $index) {
+        <a [routerLink]="item.link" class="group relative overflow-hidden"
             [class.md:row-span-2]="item.size === 'large'">
             <img [src]="item.imagen" [alt]="item.titulo"
                 class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[600ms] ease-out" />
@@ -158,12 +122,12 @@
             </div>
 
             <div class="absolute bottom-0 left-0 right-0 p-7">
-                <h3 class="text-white font-bold"
-                    [class.text-4xl]="item.size === 'large'"
+                <h3 class="text-white font-bold" [class.text-4xl]="item.size === 'large'"
                     [class.text-2xl]="item.size !== 'large'">
                     {{ item.titulo }}
                 </h3>
-                <div class="flex items-center gap-2 mt-3 text-white/60 text-sm font-semibold group-hover:text-orange-400 transition-colors duration-300">
+                <div
+                    class="flex items-center gap-2 mt-3 text-white/60 text-sm font-semibold group-hover:text-orange-400 transition-colors duration-300">
                     <span>Explorar</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
@@ -178,11 +142,36 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     SERVICIOS — Barra horizontal minimalista
-     ═══════════════════════════════════════════════════════════════════ -->
-<section class="border-y border-gray-200 py-12"
-    style="width: 100vw; margin-left: calc(-50vw + 50%);">
+<section class="py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <span class="text-orange-600 text-xs font-bold tracking-[0.25em] uppercase">Newsletter</span>
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 leading-tight tracking-tight">
+                10% de descuento<br />en tu primera compra
+            </h2>
+            <p class="text-gray-500 mt-4 leading-relaxed">
+                Únete a nuestra comunidad. Ofertas exclusivas, lanzamientos anticipados y consejos de estilo
+                directamente en tu bandeja.
+            </p>
+        </div>
+
+        <div class="bg-gray-50 p-10">
+            <form class="space-y-4">
+                <input type="email" placeholder="tu@email.com"
+                    class="w-full bg-white border border-gray-200 text-gray-900 px-5 py-4 text-sm focus:outline-none focus:border-orange-500 transition-colors" />
+                <button type="submit"
+                    class="w-full bg-gray-900 hover:bg-orange-600 text-white font-bold text-sm tracking-wider uppercase py-4 transition-colors duration-300">
+                    Suscribirse
+                </button>
+            </form>
+            <p class="text-[11px] text-gray-400 mt-4 leading-relaxed">
+                Sin spam. Cancela cuando quieras. Al suscribirte aceptas nuestra política de privacidad.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="border-y border-gray-200 py-12" style="width: 100vw; margin-left: calc(-50vw + 50%);">
     <div class="container mx-auto px-12">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-8">
             <div class="flex items-center gap-4">
@@ -232,7 +221,8 @@
                     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                     class="text-orange-600 shrink-0">
                     <path d="M10.5 3 8 9l4 13 4-13-2.5-6" />
-                    <path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" />
+                    <path
+                        d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" />
                     <path d="M2 9h20" />
                 </svg>
                 <div>
@@ -240,37 +230,6 @@
                     <p class="text-xs text-gray-500">Materiales top</p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════════
-     NEWSLETTER — Diseño split: texto izquierda, form derecha
-     ═══════════════════════════════════════════════════════════════════ -->
-<section class="py-24">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div>
-            <span class="text-orange-600 text-xs font-bold tracking-[0.25em] uppercase">Newsletter</span>
-            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 leading-tight tracking-tight">
-                10% de descuento<br/>en tu primera compra
-            </h2>
-            <p class="text-gray-500 mt-4 leading-relaxed">
-                Únete a nuestra comunidad. Ofertas exclusivas, lanzamientos anticipados y consejos de estilo directamente en tu bandeja.
-            </p>
-        </div>
-
-        <div class="bg-gray-50 p-10">
-            <form class="space-y-4">
-                <input type="email" placeholder="tu@email.com"
-                    class="w-full bg-white border border-gray-200 text-gray-900 px-5 py-4 text-sm focus:outline-none focus:border-orange-500 transition-colors" />
-                <button type="submit"
-                    class="w-full bg-gray-900 hover:bg-orange-600 text-white font-bold text-sm tracking-wider uppercase py-4 transition-colors duration-300">
-                    Suscribirse
-                </button>
-            </form>
-            <p class="text-[11px] text-gray-400 mt-4 leading-relaxed">
-                Sin spam. Cancela cuando quieras. Al suscribirte aceptas nuestra política de privacidad.
-            </p>
         </div>
     </div>
 </section>
