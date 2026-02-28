@@ -29,6 +29,7 @@
     --color-surface: #00000085;
     --color-dark: #000000;
     --color-text: #ffffff;
+    --color-btn-black: #000000;
 }
 
 @plugin "daisyui/theme" {
@@ -38,7 +39,7 @@
     color-scheme: dark;
 
     --color-primary: #ea580c;
-    --color-primary-content: #ffffff;
+    --color-primary-content: #000000;
     --color-secondary: #f97316;
     --color-secondary-content: #ffffff;
     --color-accent: #fb923c;
@@ -56,6 +57,7 @@
     --color-surface: #ffffff86;
     --color-dark: #FFFFFF;
     --color-text: #000000;
+    --color-btn-black: #FFFFFF;
 }
 
 @layer base {

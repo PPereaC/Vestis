@@ -36,7 +36,7 @@ interface CatalogoData {
 })
 export class ServicioProductos {
     private http = inject(HttpClient);
-    private readonly catalogoUrl = '/data/catalogo.json';
+    private readonly catalogoUrl = 'data/catalogo.json';
     private catalogoCache: CatalogoData | null = null;
 
     private async cargarCatalogo(): Promise<CatalogoData> {
