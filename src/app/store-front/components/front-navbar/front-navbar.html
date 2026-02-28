@@ -155,15 +155,67 @@
                 </button>
 
                 <!-- Carrito -->
-                <button class="btn btn-ghost btn-circle relative" aria-label="Carrito">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
-                        <circle cx="8" cy="21" r="1" />
-                        <circle cx="19" cy="21" r="1" />
-                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-                    </svg>
-                </button>
+                <div class="dropdown dropdown-hover dropdown-bottom dropdown-end">
+                    <button class="btn btn-ghost btn-circle relative" aria-label="Carrito">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
+                            <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg>
+                    </button>
+                    <div tabindex="0"
+                        class="dropdown-content card card-sm bg-base-100 z-1 mt-0 w-120 shadow-xl border border-base-300">
+                        <div class="card-body p-4 gap-3">
+                            <div class="flex items-center justify-between">
+                                <p class="font-semibold text-base">Tu carrito</p>
+                                <div class="badge badge-sm badge-secondary px-2 py-2 rounded-full">+2</div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-3 rounded-lg bg-base-200 p-2">
+                                    <img src="https://img01.ztat.net/article/spp-media-p1/81091efbfa984d589657841a6d94ab47/70bf110e388a4e5883b9943d27d145a5.jpg?imwidth=1800&amp;filter=packshot"
+                                        alt="Nike Performance"
+                                        class="h-14 w-14 shrink-0 rounded-md object-cover bg-base-300" />
+                                    <div class="min-w-0 flex-1">
+                                        <p class="truncate text-sm font-medium">Nike Performance</p>
+                                        <p class="text-xs text-base-content/60">Off-white · Talla 42 · x1</p>
+                                    </div>
+                                    <p class="ml-auto text-right text-sm font-semibold whitespace-nowrap">109,95€</p>
+                                </div>
+
+                                <div class="flex items-center gap-3 rounded-lg bg-base-200 p-2">
+                                    <img src="https://img01.ztat.net/article/spp-media-p1/a6ea585606504969a4acc97223576c71/00ea77ec18224e5088b0889b75672c1b.jpg?imwidth=1800&amp;filter=packshot"
+                                        alt="Adidas Performance"
+                                        class="h-14 w-14 shrink-0 rounded-md object-cover bg-base-300" />
+                                    <div class="min-w-0 flex-1">
+                                        <p class="truncate text-sm font-medium">Adidas Performance</p>
+                                        <p class="text-xs text-base-content/60">White/Pink · Talla 38 · x1</p>
+                                    </div>
+                                    <p class="ml-auto text-right text-sm font-semibold whitespace-nowrap">54,95€</p>
+                                </div>
+                            </div>
+
+                            <div class="divider my-1"></div>
+
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-base-content/70">Subtotal</span>
+                                <span class="font-semibold">164,90€</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-1">
+                                <button type="button"
+                                    class="btn bg-[var(--color-dark)] text-[var(--color-text)] border border-transparent btn-sm">Ver
+                                    carrito</button>
+                                <button type="button"
+                                    class="btn btn-primary border border-transparent btn-sm">Pagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <button class="btn btn-ghost btn-circle" type="button"
                     [attr.aria-label]="themeService.isDark() ? 'Tema actual: oscuro' : 'Tema actual: claro'"

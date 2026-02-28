@@ -27,6 +27,8 @@
     --color-warning: #f59e0b;
     --color-error: #ef4444;
     --color-surface: #00000085;
+    --color-dark: #000000;
+    --color-text: #ffffff;
 }
 
 @plugin "daisyui/theme" {
@@ -52,6 +54,8 @@
     --color-warning: #fbbf24;
     --color-error: #f87171;
     --color-surface: #ffffff86;
+    --color-dark: #FFFFFF;
+    --color-text: #000000;
 }
 
 @layer base {
