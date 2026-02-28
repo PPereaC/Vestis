@@ -19,11 +19,11 @@
 
     <!-- Detalles del producto -->
     <div class="pt-4">
-        <h2 class="text-black font-bold text-2xl underline">{{ producto()?.nombre }}</h2>
-        <span class="text-black font-bold text-2xl">{{ producto()?.descripcion }}</span>
+        <h2 class="text-[var(--color-base-900)] font-bold text-2xl underline">{{ producto()?.nombre }}</h2>
+        <span class="text-[var(--color-base-900) font-bold text-2xl">{{ producto()?.descripcion }}</span>
 
         <div class="flex gap-1 pt-3">
-            <span class="text-black text-xl pr-2">4.4</span>
+            <span class="text-[var(--color-base-900) text-xl pr-2">4.4</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-star-icon lucide-star">
@@ -69,11 +69,11 @@
         <div class="flex pt-4">
             <span class="text-red-600 text-2xl font-bold">desde {{ producto()?.precio_base | currency:'EUR':'':'1.2-2'
                 }} €</span>
-            <span class="text-gray-600 text-base pl-3 pt-1.5">IVA incluido</span>
+            <span class="text-[var(--color-base-900) text-base pl-3 pt-1.5">IVA incluido</span>
         </div>
 
         <div class="pt-8">
-            <span class="text-black text-sm">Color: <strong class="text-black font-bold">{{ producto()?.color_default
+            <span class="text-[var(--color-base-900) text-sm">Color: <strong class="text-[var(--color-base-900) font-bold">{{ producto()?.color_default
                     }}</strong></span>
         </div>
 
@@ -94,7 +94,7 @@
 
         <!-- Selector de talla -->
         <div class="pt-4">
-            <select class="select w-full border border-black focus:border-black focus:outline-none" (change)="onTallaChange($event)">
+            <select class="select w-full border border-[var(--color-base-900)] focus:border-black focus:outline-none" (change)="onTallaChange($event)">
                 <option selected disabled>Elige una talla</option>
                 @for (item of tallas(); track $index) {
                 <option value="{{ item.talla }}" [disabled]="item.stock === 0">
@@ -125,10 +125,10 @@
 
         <!-- Botón añadir a la cesta e icono favorito -->
         <div class="flex gap-2 pt-4 pb-6">
-            <button class="btn bg-black text-white border-black flex-8">
+            <button class="btn bg-[var(--color-surface-dark)] border border-1-gray flex-8">
                 Añadir a la cesta
             </button>
-            <button class="btn btn-square flex-1 border-black border">
+            <button class="btn btn-square flex-1 border border-1-gray">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -210,7 +210,7 @@
 
         <!-- Guía de tallas -->
         <div class="mt-6 border-[1.5px] border-gray-400 rounded-md p-4">
-            <h3 class="text-lg font-bold text-black mb-2">Guía de tallas</h3>
+            <h3 class="text-lg font-bold text-[var(--color-text)] mb-2">Guía de tallas</h3>
             <hr class="">
             <style>
                 table th,
@@ -219,7 +219,7 @@
                 }
 
                 th {
-                    color: black;
+                    color: var(--color-text);
                 }
             </style>
 
@@ -357,7 +357,7 @@
                 </div>
             </div>
 
-            <p class="text-xs text-gray-600 mt-4">Las medidas son aproximadas y pueden variar según el modelo.</p>
+            <p class="text-xs text-[var(--color-text)] mt-4">Las medidas son aproximadas y pueden variar según el modelo.</p>
         </div>
 
     </div>

@@ -109,62 +109,39 @@
             <!-- Navegación Escritorio -->
             <div class="hidden lg:flex items-center gap-1">
                 <a routerLink="/genero/hombre"
-                    class="btn btn-ghost border-0 outline-none hover:bg-transparent! focus:bg-transparent! active:bg-transparent! relative transition-colors duration-300 group"
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4"
                     routerLinkActive="text-orange-600">
-                    <span
-                        class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-orange-600 group-hover:w-3/4 transition-all duration-300"></span>
-                    <lucide-icon name="user" [size]="18"></lucide-icon>
                     <span>Hombres</span>
                 </a>
                 <a routerLink="/genero/mujer"
-                    class="btn btn-ghost border-0 outline-none hover:bg-transparent! focus:bg-transparent! active:bg-transparent! relative transition-colors duration-300 group"
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4"
                     routerLinkActive="text-orange-600">
-                    <span
-                        class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-orange-600 group-hover:w-3/4 transition-all duration-300"></span>
-                    <lucide-icon name="user" [size]="18"></lucide-icon>
                     <span>Mujeres</span>
                 </a>
                 <a routerLink="/genero/ninos"
-                    class="btn btn-ghost border-0 outline-none hover:bg-transparent! focus:bg-transparent! active:bg-transparent! relative transition-colors duration-300 group"
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4"
                     routerLinkActive="text-orange-600">
-                    <span
-                        class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-orange-600 group-hover:w-3/4 transition-all duration-300"></span>
-                    <lucide-icon name="baby" [size]="18"></lucide-icon>
                     <span>Niños</span>
                 </a>
-                <div class="divider divider-horizontal mx-0"></div>
                 <a
-                    class="btn btn-ghost border-0 outline-none hover:bg-transparent! focus:bg-transparent! active:bg-transparent! relative transition-colors duration-300 group">
-                    <span
-                        class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-orange-600 group-hover:w-3/4 transition-all duration-300"></span>
-                    <lucide-icon name="tag" [size]="18"></lucide-icon>
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4">
                     <span>Ofertas</span>
                 </a>
                 <a
-                    class="btn btn-ghost border-0 outline-none hover:bg-transparent! focus:bg-transparent! active:bg-transparent! relative transition-colors duration-300 group">
-                    <span
-                        class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-orange-600 group-hover:w-3/4 transition-all duration-300"></span>
-                    <lucide-icon name="sparkles" [size]="18"></lucide-icon>
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4">
                     <span>Novedades</span>
                 </a>
-            </div>
-
-            <!-- Barra de búsqueda -->
-            <div class="flex-1 max-w-md hidden md:block">
-                <div class="form-control">
-                    <label
-                        class="input bg-base-200 border border-gray-500 focus-within:border-orange-600 flex items-center gap-2 transition-all outline-none">
-                        <lucide-icon name="search" [size]="20" class="text-base-content/40"></lucide-icon>
-                        <input type="text" placeholder="Buscar productos..." class="grow bg-transparent outline-none" />
-                    </label>
-                </div>
             </div>
 
             <!-- Botones de acción -->
             <div class="flex items-center gap-1">
                 <!-- Buscar en móvil -->
                 <button class="btn btn-ghost btn-circle md:hidden" aria-label="Buscar">
-                    <lucide-icon name="search" [size]="22"></lucide-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
                 </button>
 
                 <!-- Favoritos -->
@@ -186,6 +163,34 @@
                         <circle cx="19" cy="21" r="1" />
                         <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
                     </svg>
+                </button>
+
+                <button class="btn btn-ghost btn-circle" type="button"
+                    [attr.aria-label]="themeService.isDark() ? 'Tema actual: oscuro' : 'Tema actual: claro'"
+                    (click)="themeService.toggleTheme()">
+                    <ng-container *ngIf="!themeService.isDark(); else darkThemeIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-sun-icon lucide-sun">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 3v1" />
+                            <path d="M12 20v1" />
+                            <path d="M3 12h1" />
+                            <path d="M20 12h1" />
+                            <path d="m18.364 5.636-.707.707" />
+                            <path d="m6.343 17.657-.707.707" />
+                            <path d="m5.636 5.636.707.707" />
+                            <path d="m17.657 17.657.707.707" />
+                        </svg>
+                    </ng-container>
+                    <ng-template #darkThemeIcon>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-moon-icon lucide-moon">
+                            <path
+                                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                        </svg>
+                    </ng-template>
                 </button>
 
                 <!-- Usuario -->

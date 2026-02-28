@@ -1,8 +1,7 @@
 <section class="relative h-[100vh] overflow-hidden bg-gray-950"
     style="width: 100vw; margin-left: calc(-50vw + 50%); margin-top: -1rem;">
 
-    <div class="absolute inset-0 transition-opacity duration-700 ease-in-out"
-        class.opacity-100="currentSlide === $index" class.opacity-0="currentSlide !== $index">
+    <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100">
         <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?q=80&w=1374&auto=format&fit=crop"
             alt="Running Collection" class="w-full h-full object-cover scale-105" />
     </div>
@@ -11,7 +10,7 @@
 
     <!-- Marquee de marcas -->
     <div
-        class="absolute top-0 left-0 right-0 z-10 bg-black/40 backdrop-blur-sm border-b border-white/10 py-4 overflow-hidden cursor-pointer">
+        class="absolute top-0 left-0 right-0 z-10 bg-[var(--color-surface)] backdrop-blur-sm border-b border-white/10 py-4 overflow-hidden cursor-pointer">
         <div class="flex items-center gap-16 animate-[marquee_30s_linear_infinite] whitespace-nowrap px-4">
             @for (marca of logosMarcas; track marca.logoUrl) {
             <div class="group inline-flex items-center gap-3 shrink-0">
@@ -19,7 +18,7 @@
                     class="h-6 md:h-7 w-auto shrink-0 opacity-55 group-hover:opacity-95 transition-opacity duration-300"
                     loading="lazy" decoding="async" />
                 <span
-                    class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-white/50 group-hover:text-white/85 transition-colors duration-300">
+                    class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-[var(--color-marquee)] group-hover:text-white/85 transition-colors duration-300">
                     {{ marca.name }}
                 </span>
             </div>
@@ -70,7 +69,7 @@
 <!-- CATEGORÍAS — Tarjetas horizontales -->
 <section class="py-20">
     <div class="flex items-center justify-between mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 tracking-tight">Compra por género</h2>
+        <h2 class="text-3xl font-bold color-secondary tracking-tight">Compra por género</h2>
         <div class="h-px flex-1 bg-gray-200 ml-8"></div>
     </div>
 
@@ -103,7 +102,7 @@
 
 <section class="py-20">
     <div class="flex items-center justify-between mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 tracking-tight">Destacados</h2>
+        <h2 class="text-3xl font-bold secondary tracking-tight">Destacados</h2>
         <div class="h-px flex-1 bg-gray-200 ml-8"></div>
     </div>
 
@@ -146,7 +145,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
             <span class="text-orange-600 text-xs font-bold tracking-[0.25em] uppercase">Newsletter</span>
-            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 leading-tight tracking-tight">
+            <h2 class="text-4xl lg:text-5xl font-bold secondary mt-4 leading-tight tracking-tight">
                 10% de descuento<br />en tu primera compra
             </h2>
             <p class="text-gray-500 mt-4 leading-relaxed">
@@ -155,12 +154,12 @@
             </p>
         </div>
 
-        <div class="bg-gray-50 p-10">
+        <div class="bg-surface p-10">
             <form class="space-y-4">
-                <input type="email" placeholder="tu@email.com"
+                <input type="email" placeholder="ejemplo@gmail.com"
                     class="w-full bg-white border border-gray-200 text-gray-900 px-5 py-4 text-sm focus:outline-none focus:border-orange-500 transition-colors" />
                 <button type="submit"
-                    class="w-full bg-gray-900 hover:bg-orange-600 text-white font-bold text-sm tracking-wider uppercase py-4 transition-colors duration-300">
+                    class="w-full bg-primary hover:bg-orange-600 text-white font-bold text-sm tracking-wider uppercase py-4 transition-colors duration-300">
                     Suscribirse
                 </button>
             </form>
@@ -185,8 +184,8 @@
                     <circle cx="7" cy="18" r="2" />
                 </svg>
                 <div>
-                    <p class="text-sm font-bold text-gray-900">Envío gratis</p>
-                    <p class="text-xs text-gray-500">Pedidos +50€</p>
+                    <p class="text-sm font-bold color-secondary">Envío gratis</p>
+                    <p class="text-xs text-secondary">Pedidos +50€</p>
                 </div>
             </div>
 
@@ -198,8 +197,8 @@
                     <path d="M3 3v5h5" />
                 </svg>
                 <div>
-                    <p class="text-sm font-bold text-gray-900">Devolución 30 días</p>
-                    <p class="text-xs text-gray-500">Sin preguntas</p>
+                    <p class="text-sm font-bold color-secondary">Devolución 30 días</p>
+                    <p class="text-xs text-secondary">Sin preguntas</p>
                 </div>
             </div>
 
@@ -211,8 +210,8 @@
                     <path d="m9 12 2 2 4-4" />
                 </svg>
                 <div>
-                    <p class="text-sm font-bold text-gray-900">Pago seguro</p>
-                    <p class="text-xs text-gray-500">100% protegido</p>
+                    <p class="text-sm font-bold color-secondary">Pago seguro</p>
+                    <p class="text-xs text-secondary">100% protegido</p>
                 </div>
             </div>
 
@@ -226,8 +225,8 @@
                     <path d="M2 9h20" />
                 </svg>
                 <div>
-                    <p class="text-sm font-bold text-gray-900">Calidad premium</p>
-                    <p class="text-xs text-gray-500">Materiales top</p>
+                    <p class="text-sm font-bold color-secondary">Calidad premium</p>
+                    <p class="text-xs text-secondary">Materiales top</p>
                 </div>
             </div>
         </div>
