@@ -43,7 +43,6 @@ __screenshots__/
 .DS_Store
 Thumbs.db
 
-# Secretos y Entornos
-src/environments/environment.development.ts
-src/environments/environment.ts
-.env
+# Environment files
+src/environments/environment*.ts
+.aider*

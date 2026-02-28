@@ -1,0 +1,1036 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Nike Performance",
+            "descripcion": "PEGASUS 41 - Zapatillas running asfalto",
+            "precio_base": 139.95,
+            "precio_oferta": 109.95,
+            "tiene_oferta": true,
+            "imagen_principal_url": "https://img01.ztat.net/article/spp-media-p1/81091efbfa984d589657841a6d94ab47/70bf110e388a4e5883b9943d27d145a5.jpg?imwidth=1800\u0026filter=packshot",
+            "categoria": "Deportiva Running",
+            "marca": "Nike",
+            "genero": "Hombre",
+            "fecha_creacion": "2026-01-27 21:41:54.644066",
+            "color_default": "off-white, gold-coloured"
+        },
+        {
+            "id": 2,
+            "nombre": "Adidas Performance",
+            "descripcion": "GALAXY 7 - Zapatillas running asfalto - footwear",
+            "precio_base": 54.95,
+            "precio_oferta": null,
+            "tiene_oferta": false,
+            "imagen_principal_url": "https://img01.ztat.net/article/spp-media-p1/a6ea585606504969a4acc97223576c71/00ea77ec18224e5088b0889b75672c1b.jpg?imwidth=1800\u0026filter=packshot",
+            "categoria": "Deportiva Running",
+            "marca": "Adidas",
+            "genero": "Mujer",
+            "fecha_creacion": "2026-02-02 15:19:04.124718",
+            "color_default": "footwear white/clear pink/core black"
+        },
+        {
+            "id": 3,
+            "nombre": "Asics Court Slide 4",
+            "descripcion": "Zapatillas de tenis para todas las superficies",
+            "precio_base": 64.95,
+            "precio_oferta": null,
+            "tiene_oferta": false,
+            "imagen_principal_url": "https://img01.ztat.net/article/spp-media-p1/1b57584cf16142008fc22e1d96a617ef/fe04260ebe8d4028be75cf24b4755a41.jpg?imwidth=1800&filter=packshot",
+            "categoria": "Deportiva Running",
+            "marca": "Asics",
+            "genero": "Hombre",
+            "fecha_creacion": "2026-02-27 12:52:04.124718",
+            "color_default": "ironclad/white"
+        },
+        {
+            "id": 4,
+            "nombre": "Puma Retaliate 3",
+            "descripcion": "Zapatillas de entrenamiento",
+            "precio_base": 46.50,
+            "precio_oferta": null,
+            "tiene_oferta": false,
+            "imagen_principal_url": "https://img01.ztat.net/article/spp-media-p1/3867cb16a6bc4a04982542896e2bce98/3818276d1d8346da83cca54722de5f9b.jpg?imwidth=1800&filter=packshot",
+            "categoria": "Deportiva Running",
+            "marca": "Puma",
+            "genero": "Hombre",
+            "fecha_creacion": "2026-02-27 12:52:04.124718",
+            "color_default": "black white"
+        },
+        {
+            "id": 5,
+            "nombre": "Under Armour Dynamic 2",
+            "descripcion": "Zapatillas de entrenamiento",
+            "precio_base": 100.00,
+            "precio_oferta": null,
+            "tiene_oferta": false,
+            "imagen_principal_url": "https://img01.ztat.net/article/spp-media-p1/d54444d524da46979ec02abac9470e84/62b3db6530df422583d399078c19535f.jpg?imwidth=1800&filter=packshot",
+            "categoria": "Deportiva Running",
+            "marca": "Under Armour",
+            "genero": "Hombre",
+            "fecha_creacion": "2026-02-27 12:52:04.124718",
+            "color_default": "black/castlerock/white"
+        },
+        {
+            "id": 6,
+            "nombre": "Reebok Classic Glide Ripple",
+            "descripcion": "Zapatillas",
+            "precio_base": 75.00,
+            "precio_oferta": null,
+            "tiene_oferta": false,
+            "imagen_principal_url": "https://img01.ztat.net/article/spp-media-p1/1da341493a12420cbc196ed3dde97aaf/0fbd32880f764bf294311338dbf83f69.jpg?imwidth=1800&filter=packshot",
+            "categoria": "Deportiva",
+            "marca": "Reebok",
+            "genero": "Hombre",
+            "fecha_creacion": "2026-02-27 12:52:04.124718",
+            "color_default": "vector navy cloud white vector navy"
+        }
+    ],
+    "imagenes_variante": [
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/0e936734074f4c27b4e71b738fb4dd9c/cceb356b861e44dabbe237289699f864.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/0c1e1d8091b4481883200ac13679d897/dece3c48321c4f16bfc060b45d80e4ae.jpg?imwidth=1800\u0026filter=packshot"
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/f6e53a6e49dd4702888b9d39a6b5aca1/bc41592912384bffa9e4eeea23492c70.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/f2f82b7f0a8f4771860f4ce8995467ad/10e134f1f8bc4d2ba6fa566fe4368011.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/8b3ec529d8334fed834ddd6cea8776fd/e7c3bbd4601b4c7dac54a6c0fb86dc48.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/794fb5e636394f138010373e622f60f8/5aacde7307c34ded996ebc8dba1389d2.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/3b1a2658b78d49919d66313bef344c50/868058881eb64eacbb03ec21863abd22.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/b0454ee62746406b8c5a656b35c0f9f4/07ae07c971324f7ea9d18ca8025bda38.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/a6ea585606504969a4acc97223576c71/00ea77ec18224e5088b0889b75672c1b.jpg?imwidth=1800\u0026filter=packshot"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/83705d9a83de44aaa9fabe160ba6e7f7/b58c62fac8a846f9b3ff052c4bcabfa6.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/3dc8c2df78744c559d2acade7b83fc33/846b6fc2931f43178e4875bf7cabe81b.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/8f80b97df8f54484bb23d61d25edd424/cbe442a1ab9c4b4aa44f8fd2a992aef3.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/a220289163f94cc9815439319aac4a4e/6dd36efc826f46e2a3a2999165ac88af.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/c8427b251c7847229e94201ed105ce5d/432944ae7ae24669a27ec16b99158661.jpg?imwidth=1800\u0026filter=packshot"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/8111c358a6de45b78b2f5c18eb0bab3c/6508a77e0e84459fbbd4712444bfea67.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/58fd74b3b04e41b69291661510792b8b/ec2e55fad10843029f26ba52fe2f6e95.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/fab1cbcd23544305a7b7b58b9e6253d6/aa021c99650b43659ce4a011a3958d4f.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/a34790b33e38407883fe3e3ab3797cb5/455ead1d9ed54a7d96b4c69b46f040a7.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/e3ed96dc5ea548fbabeae9e7d8ec6831/51ccbdd54c8c447981143044a6c78f3a.jpg?imwidth=1800\u0026filter=packshot"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/3ad04a184e0b495d9e33d1f42977308b/cd0fb0bd572d485f829ab36037325b75.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/79f5690cef644e27bceba689f35e25fb/d8295b9f783f4003b6e1aa657f23151f.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/fd5fdf47d883419780bffbadb577e1e0/67e86e98948c470f9f4797d37a263422.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/c54e344c85114b66af58000422affef8/3a797a4ca30444e4bdcee7f18dbdd6b8.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/cf7682d14a9d4558ad2db09f922ed418/f77d1e8309274d358a720fdac72aec09.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/3987df03c0bb42d5b9400c497a76a554/3b0e3642d6aa457bbb0766a2e495ac9e.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/484be4e3150e4370b304945b289fc202/07c9f973ef574a16a6f44412657a71c1.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/b640020091474601b15f8e48b00dbe2d/bd0ea577bc094e76a7c75d2e7d59bec9.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/ff92fb9ea5604a598fc8557c4e919744/eca44bea187d4c49861a4adfed85f75a.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/b79e2cfea9f74bf6859856a8af370d14/fcc7329c24d846289010e59799f215b5.jpg?imwidth=1800&filter=packshot"
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/4059d020d42f4756a2963c1fb6b89c66/dd23021b2efb4358afb00ff956e0671c.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/afa0fb0970c042c389f18f932872c951/b69eb979356c4d69bd26095f39b0ec84.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/9afd801ad33e4b4c951e79eebdc5d5f1/d921eec58a2c4ce59fc691702a04ab63.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/8f450fec68354d60a3f25c6e602824ed/5fe9c9fd16b645e7be6ab7cce0b2144e.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/c3b25f860a474db18f133ececff194b5/5dbf4a45b85140caac2e34f4de12dfeb.jpg?imwidth=1800&filter=packshot"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/db5ecf84aa6e4dca961641c951678075/4ad27167b94f496db1d13d9335e8cf2b.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/df6cb2fd028742f7a90fb3641bce46b3/70d433eeb9064a3f98b86c4ef16352d9.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/791fbb1ac8024acba65a7fb37cd42d9b/efadbd52b0514b8e82bf41ec1f589fc6.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/366d55a41a074c1184ab42f57a3e9742/e2f0860fdfb948b1bf7df2347eba51f3.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/c080a693e6ed4558a27582d7b4527f5f/7829f16bbb894038abdf2c552d846a87.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/f8c221885c8145578594429b58a23937/7700b14d9e3243a693ee06723bccd700.jpg?imwidth=1800&filter=packshot"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/d83b98886f0d4ba19ac49dfe10088afb/9226d270fdb14bafbae5a5a92755239d.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/44552e07f20b4af898a2b1bc4454bf0e/1755eaf6d3ce4387a8d5a1762fe0c761.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/4a06cd5d60ab425e9350d0d6bd5dd561/e016b2a332654123837030320fc4effa.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/fd78fd94568c4ee7a577033e06d4cffc/1e52e7f4a2ba41cfbae25fe5af23d798.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/d5094651dc104a1a83c2358aebcc90e1/b666df5bb7a6487389ebc7d2eb77f79f.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/090e3885937e488082356695f5d599a3/80ee7bcaece246379dce26afb1c5e0ef.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/e192986632e642fea469d772777314fc/66f087ed08db466d9bd1be60408922f4.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/352b0047fa5a4580b43859d8fd705217/a9356fc61ad54b6ab66e05e99cfacd43.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/163f121029b84b8ca2c4fb9b99b94d8a/42ff440975bf486ba14315957d645828.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/0fcbd99eccd74af78511bacc07c57f11/15fdb707698d47f68a90647e217547bc.jpg?imwidth=1800&filter=packshot"
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/4b814d3051264561b1fcc6ef3f04b459/3df3180a193d4687a2282e658652000a.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/d89a62728842430abfe43f2f24694cd1/7aee989c2c2a4d818652bb3b8dcae4ba.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/03f8230e50c94e599fa61a40cee71efd/9d44de83238942cda517c073286272d0.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/e1e74b184142412aad9fb1978b36c86d/2204071c1bb345e69daa5500192e4e06.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/d7bf69e4d9564298aed31cea6d3ee752/09abc4717e0543a6b3d938dc09f5fa7d.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/59f6a86de2404fffb70109f6bc6943cc/0254bf375fc14717a8aee49a0ca141ef.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/636a28297cb541d48b77494096ae40be/cd3066ffad0340f286c0a124bd681a28.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/b5d9882ebb204fc99d9226d6f9ab87cd/07afd150c2044ec087b98c9a9c967012.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/a7c0a4e02dbb45a797edfac3bf951dcc/4300639dfad2412291f97947868e2301.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/0790c4fb44804c448873cc06c76c0ac8/6c7ef06294a5431bbd6cf17edcdd3596.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/adeb7e306f624978b7138b4b9ffdfde1/3d6f4f10f2c041739dc1e1291f2912b3.jpg?imwidth=1800&filter=packshot"
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/44291cb349d04a11b666c21f6efab61e/cb4204ad9d65437389f918b960f4f8dd.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/1cd02ac46ccc4c5c9a808fd1e570da47/2d5238a7124f42edae292da7e6db1a21.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/7ba91f05ed92450099c41a0b77a07a4f/727cb3f82ed24393aa2fd1f97b0b5cc1.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/4ada1c4c97394fc9b4d948f89f1c78a4/e47346f2274f4237b3e9fda3b545f719.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/9894a7bccfa54748bd80c5b4f821a184/238b443f24ad4098b7488c5faa937353.jpg?imwidth=1800&filter=packshot"
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/907ff834e3994a209a0723e8c271e759/0485e76a6a1949f88440080d45e3ff6c.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/ec8cdd40b0594882bc4b7df4b0c324e4/180aed6f48084253871788a3180367af.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/e73e7ed468f542af86b6e128dea7df30/1974db420615478f830f5dfc6573dba5.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/ca280a84d73546a8a8fa35e233fea2c6/c1c4f78aa33149c196713aa6e9d3f0e9.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/1da341493a12420cbc196ed3dde97aaf/0fbd32880f764bf294311338dbf83f69.jpg?imwidth=1800&filter=packshot"
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/b315ddf4a00748698300a3ac5919db48/071a27f3a6684b7d8071ccce5dfe05ed.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/c9e0e5e5e7c24deba66281835ee117ff/9417e5d02d7f429abde3541db59c46a4.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/c7be87b6608b412bae405e9ce50fda2d/84ef012f769649aea8e2c3329d389b52.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/77baaa48e8cb4dd39dca1155206b2f0e/f9c957e67b394bc2ae9af71360dca669.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/15a497b342524c0e867d98e936d5c878/c5fc985cd754454d82f609eaee94bc74.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/2d5775ca1844468192cda51cfa2195cd/cca81348b6cc417781b3191debe6f43b.jpg?imwidth=1800&filter=packshot"
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/2e627e959a0e44f189dfc120171f1f0d/0fbbe6d73f5b4ddb819a0d91725ac0f2.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/38b322e0d5ef43a8a32685a8deb5f197/7d6e9d1a757c45d7aa67b5cb12b96c0f.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/1da6b4d9b63940878970aa9a860b7cf5/5fdea70cd5654ff9a800d9cd66bd29ca.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/08f1c32e492c4bd38aa5cb21e4cd2a89/a89d360550ec44688781644a99352e63.jpg?imwidth=1800"
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "url_imagen": "https://img01.ztat.net/article/spp-media-p1/5715f31329f44f4f97f5eec5ac92c20e/aeb2daccd34f40f2a645d08b2b27d8b4.jpg?imwidth=1800"
+        }
+    ],
+    "variantes": [
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "talla": "42",
+            "stock": 1
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "talla": "43",
+            "stock": 3
+        },
+        {
+            "producto_id": 1,
+            "color": "off-white, gold-coloured",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "talla": "40",
+            "stock": 12
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "talla": "41",
+            "stock": 8
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 1,
+            "color": "black",
+            "talla": "43",
+            "stock": 7
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "36",
+            "stock": 2
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "37",
+            "stock": 6
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "38",
+            "stock": 8
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "39",
+            "stock": 3
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "40",
+            "stock": 6
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "41",
+            "stock": 8
+        },
+        {
+            "producto_id": 2,
+            "color": "footwear white/clear pink/core black",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "talla": "37",
+            "stock": 3
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "talla": "38",
+            "stock": 6
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "talla": "40",
+            "stock": 8
+        },
+        {
+            "producto_id": 2,
+            "color": "cloud white magic grey met semi flash aqua",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "37",
+            "stock": 5
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "38",
+            "stock": 4
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "39",
+            "stock": 6
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "40",
+            "stock": 0
+        },
+        {
+            "producto_id": 2,
+            "color": "core black/bliss pink/carbon",
+            "talla": "41",
+            "stock": 9
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "talla": "42",
+            "stock": 9
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "talla": "41",
+            "stock": 2
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "talla": "40",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "talla": "39",
+            "stock": 3
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "talla": "38",
+            "stock": 6
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "talla": "37",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "talla": "43",
+            "stock": 2
+        },
+        {
+            "producto_id": 3,
+            "color": "ironclad/white",
+            "talla": "44",
+            "stock": 2
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "talla": "41",
+            "stock": 2
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "talla": "43",
+            "stock": 8
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "talla": "44",
+            "stock": 9
+        },
+        {
+            "producto_id": 3,
+            "color": "indigo fog/white",
+            "talla": "40",
+            "stock": 7
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "talla": "43",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "talla": "44",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/cold moss",
+            "talla": "40",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "talla": "43",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "talla": "44",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "talla": "40",
+            "stock": 5
+        },
+        {
+            "producto_id": 3,
+            "color": "white/dark blue",
+            "talla": "39",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "talla": "43",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "talla": "44",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "talla": "40",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black white",
+            "talla": "39",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "talla": "43",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "talla": "44",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "talla": "40",
+            "stock": 5
+        },
+        {
+            "producto_id": 4,
+            "color": "black cool dark gray",
+            "talla": "39",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "talla": "43",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "talla": "44",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "talla": "40",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "black/castlerock/white",
+            "talla": "39",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "talla": "43",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "talla": "44",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "talla": "40",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "expedition green",
+            "talla": "39",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "talla": "41",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "talla": "42",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "talla": "43",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "talla": "44",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "talla": "40",
+            "stock": 5
+        },
+        {
+            "producto_id": 5,
+            "color": "navy",
+            "talla": "39",
+            "stock": 5
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "talla": "41",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "talla": "42",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "talla": "43",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "talla": "44",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "talla": "40",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "vector navy cloud white vector navy",
+            "talla": "39",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "talla": "41",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "talla": "42",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "talla": "43",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "talla": "44",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "talla": "40",
+            "stock": 6
+        },
+        {
+            "producto_id": 6,
+            "color": "core black/cloud white/core black",
+            "talla": "39",
+            "stock": 6
+        }
+    ]
+}

@@ -1,0 +1,234 @@
+<section class="relative h-[100vh] overflow-hidden bg-gray-950"
+    style="width: 100vw; margin-left: calc(-50vw + 50%); margin-top: -1rem;">
+
+    <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100">
+        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?q=80&w=1374&auto=format&fit=crop"
+            alt="Running Collection" class="w-full h-full object-cover scale-105" />
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10"></div>
+
+    <!-- Marquee de marcas -->
+    <div
+        class="absolute top-0 left-0 right-0 z-10 bg-[var(--color-surface)] backdrop-blur-sm border-b border-white/10 py-4 overflow-hidden cursor-pointer">
+        <div class="flex items-center gap-16 animate-[marquee_30s_linear_infinite] whitespace-nowrap px-4">
+            @for (marca of logosMarcas; track marca.logoUrl) {
+            <div class="group inline-flex items-center gap-3 shrink-0">
+                <img [src]="marca.logoUrl" [alt]="marca.name + ' logo'"
+                    class="h-6 md:h-7 w-auto shrink-0 opacity-55 group-hover:opacity-95 transition-opacity duration-300"
+                    loading="lazy" decoding="async" />
+                <span
+                    class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-[var(--color-marquee)] group-hover:text-white/85 transition-colors duration-300">
+                    {{ marca.name }}
+                </span>
+            </div>
+            }
+            @for (marca of logosMarcas; track $index) {
+            <div class="group inline-flex items-center gap-3 shrink-0">
+                <img [src]="marca.logoUrl" [alt]="marca.name + ' logo'"
+                    class="h-6 md:h-7 w-auto shrink-0 opacity-55 group-hover:opacity-95 transition-opacity duration-300"
+                    loading="lazy" decoding="async" />
+                <span
+                    class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-white/50 group-hover:text-white/85 transition-colors duration-300">
+                    {{ marca.name }}
+                </span>
+            </div>
+            }
+        </div>
+    </div>
+
+    <!-- Contenido hero -->
+    <div class="relative h-full flex flex-col justify-end pb-52 px-8 lg:px-20">
+        <div class="max-w-3xl">
+            <span
+                class="inline-block border border-orange-500 text-orange-400 text-xs font-bold tracking-[0.25em] uppercase px-4 py-1.5 mb-6 ml-2 bg-orange-500 text-white">
+                Primavera / Verano 2026
+            </span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
+                El sudor<br />
+                <span class="text-orange-500">no miente.</span>
+            </h1>
+            <p class="text-lg text-gray-300 mt-6 max-w-lg leading-relaxed">
+                Ni la ropa que llevas cuando nadie te ve. Prepara tu equipo para los días difíciles.
+            </p>
+
+            <div class="flex items-center gap-6 mt-10">
+                <a routerLink="/genero/mujer"
+                    class="bg-orange-600 hover:bg-orange-500 text-white font-bold text-sm tracking-wider uppercase px-10 py-4 transition-colors duration-300">
+                    Comprar ahora
+                </a>
+                <a routerLink="/genero/hombre"
+                    class="text-white/70 hover:text-white font-semibold text-sm tracking-wider uppercase border-b border-white/30 hover:border-white pb-1 transition-all duration-300">
+                    Ver ofertas
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORÍAS — Tarjetas horizontales -->
+<section class="py-20">
+    <div class="flex items-center justify-between mb-12">
+        <h2 class="text-3xl font-bold color-secondary tracking-tight">Compra por género</h2>
+        <div class="h-px flex-1 bg-gray-200 ml-8"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        @for (cat of categorias; track $index) {
+        <a [routerLink]="cat.link" class="group relative overflow-hidden bg-gray-100 aspect-[4/5]">
+            <img [src]="cat.imagen" [alt]="cat.titulo"
+                class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[600ms] ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"></div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-7">
+                <div class="flex items-end justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">{{ cat.titulo }}</h3>
+                    </div>
+                    <div
+                        class="w-10 h-10 bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-orange-600 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17 17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </a>
+        }
+    </div>
+</section>
+
+<section class="py-20">
+    <div class="flex items-center justify-between mb-12">
+        <h2 class="text-3xl font-bold secondary tracking-tight">Destacados</h2>
+        <div class="h-px flex-1 bg-gray-200 ml-8"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-[280px]">
+        @for (item of destacados; track $index) {
+        <a [routerLink]="item.link" class="group relative overflow-hidden"
+            [class.md:row-span-2]="item.size === 'large'">
+            <img [src]="item.imagen" [alt]="item.titulo"
+                class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[600ms] ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+            <div class="absolute top-6 left-6">
+                <span class="bg-orange-600 text-white text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1.5">
+                    {{ item.badge }}
+                </span>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-7">
+                <h3 class="text-white font-bold" [class.text-4xl]="item.size === 'large'"
+                    [class.text-2xl]="item.size !== 'large'">
+                    {{ item.titulo }}
+                </h3>
+                <div
+                    class="flex items-center gap-2 mt-3 text-white/60 text-sm font-semibold group-hover:text-orange-400 transition-colors duration-300">
+                    <span>Explorar</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="group-hover:translate-x-1 transition-transform duration-300">
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                    </svg>
+                </div>
+            </div>
+        </a>
+        }
+    </div>
+</section>
+
+<section class="py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <span class="text-orange-600 text-xs font-bold tracking-[0.25em] uppercase">Newsletter</span>
+            <h2 class="text-4xl lg:text-5xl font-bold secondary mt-4 leading-tight tracking-tight">
+                10% de descuento<br />en tu primera compra
+            </h2>
+            <p class="text-gray-500 mt-4 leading-relaxed">
+                Únete a nuestra comunidad. Ofertas exclusivas, lanzamientos anticipados y consejos de estilo
+                directamente en tu bandeja.
+            </p>
+        </div>
+
+        <div class="bg-surface p-10">
+            <form class="space-y-4">
+                <input type="email" placeholder="ejemplo@gmail.com"
+                    class="w-full bg-white border border-gray-200 text-gray-900 px-5 py-4 text-sm focus:outline-none focus:border-orange-500 transition-colors" />
+                <button type="submit"
+                    class="w-full bg-primary hover:bg-orange-600 text-white font-bold text-sm tracking-wider uppercase py-4 transition-colors duration-300">
+                    Suscribirse
+                </button>
+            </form>
+            <p class="text-[11px] text-gray-400 mt-4 leading-relaxed">
+                Sin spam. Cancela cuando quieras. Al suscribirte aceptas nuestra política de privacidad.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="border-t border-gray-200 py-12" style="width: 100vw; margin-left: calc(-50vw + 50%);">
+    <div class="container mx-auto px-12">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-8">
+            <div class="flex items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-orange-600 shrink-0">
+                    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                    <path d="M15 18H9" />
+                    <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                    <circle cx="17" cy="18" r="2" />
+                    <circle cx="7" cy="18" r="2" />
+                </svg>
+                <div>
+                    <p class="text-sm font-bold color-secondary">Envío gratis</p>
+                    <p class="text-xs text-secondary">Pedidos +50€</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-orange-600 shrink-0">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                    <path d="M3 3v5h5" />
+                </svg>
+                <div>
+                    <p class="text-sm font-bold color-secondary">Devolución 30 días</p>
+                    <p class="text-xs text-secondary">Sin preguntas</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-orange-600 shrink-0">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                    <path d="m9 12 2 2 4-4" />
+                </svg>
+                <div>
+                    <p class="text-sm font-bold color-secondary">Pago seguro</p>
+                    <p class="text-xs text-secondary">100% protegido</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-orange-600 shrink-0">
+                    <path d="M10.5 3 8 9l4 13 4-13-2.5-6" />
+                    <path
+                        d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" />
+                    <path d="M2 9h20" />
+                </svg>
+                <div>
+                    <p class="text-sm font-bold color-secondary">Calidad premium</p>
+                    <p class="text-xs text-secondary">Materiales top</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

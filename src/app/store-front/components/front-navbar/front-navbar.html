@@ -1,0 +1,329 @@
+<nav class="sticky top-0 z-50 bg-base-100 shadow-md">
+    <!-- Barra superior de promoción -->
+    <div class="bg-primary text-white py-2">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-sm font-medium">
+                🚚 Envío gratis en compras superiores a 50€ | ✅ Devoluciones gratis en 30 días
+            </p>
+        </div>
+    </div>
+
+    <!-- Navegación Principal -->
+    <div class="w-full px-8">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo y Menú Móvil -->
+            <div class="flex items-center gap-2">
+                <!-- Menú para móviles -->
+                <div class="dropdown lg:hidden">
+                    <button tabindex="0" class="btn btn-ghost btn-circle" aria-label="Menú">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-text-align-start-icon lucide-text-align-start">
+                            <path d="M21 5H3" />
+                            <path d="M15 12H3" />
+                            <path d="M17 19H3" />
+                        </svg>
+                    </button>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-64 p-2 shadow-xl border-0">
+                        <li>
+                            <a routerLink="/genero/hombre" class="flex items-center gap-2 py-3"
+                                routerLinkActive="bg-orange-600 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-mars-icon lucide-mars">
+                                    <path d="M16 3h5v5" />
+                                    <path d="m21 3-6.75 6.75" />
+                                    <circle cx="10" cy="14" r="6" />
+                                </svg>
+                                <span class="font-medium">Hombres</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/genero/mujer" class="flex items-center gap-2 py-3"
+                                routerLinkActive="bg-orange-600 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-venus-icon lucide-venus">
+                                    <path d="M12 15v7" />
+                                    <path d="M9 19h6" />
+                                    <circle cx="12" cy="9" r="6" />
+                                </svg>
+                                <span class="font-medium">Mujeres</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/genero/ninos" class="flex items-center gap-2 py-3"
+                                routerLinkActive="bg-orange-600 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-baby-icon lucide-baby">
+                                    <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" />
+                                    <path d="M15 12h.01" />
+                                    <path
+                                        d="M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" />
+                                    <path d="M9 12h.01" />
+                                </svg>
+                                <span class="font-medium">Niños</span>
+                            </a>
+                        </li>
+                        <div class="divider my-1"></div>
+                        <li>
+                            <a class="flex items-center gap-2 py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-tag-icon lucide-tag">
+                                    <path
+                                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
+                                    <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
+                                </svg>
+                                <span class="font-medium">Ofertas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center gap-2 py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles">
+                                    <path
+                                        d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+                                    <path d="M20 2v4" />
+                                    <path d="M22 4h-4" />
+                                    <circle cx="4" cy="20" r="2" />
+                                </svg>
+                                <span class="font-medium">Novedades</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Logo -->
+                <a routerLink="/" class="flex items-center gap-1 group cursor-pointer">
+                    <img src="/assets/images/logo.png" class="w-12 h-9" alt="Vestis Logo">
+                    <span class="text-3xl font-bold font-montserrat bg-clip-text text-primary">
+                        VESTIS
+                    </span>
+                </a>
+            </div>
+
+            <!-- Navegación Escritorio -->
+            <div class="hidden lg:flex items-center gap-1">
+                <a routerLink="/genero/hombre"
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4"
+                    routerLinkActive="text-orange-600">
+                    <span>Hombres</span>
+                </a>
+                <a routerLink="/genero/mujer"
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4"
+                    routerLinkActive="text-orange-600">
+                    <span>Mujeres</span>
+                </a>
+                <a routerLink="/genero/ninos"
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4"
+                    routerLinkActive="text-orange-600">
+                    <span>Niños</span>
+                </a>
+                <a
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4">
+                    <span>Ofertas</span>
+                </a>
+                <a
+                    class="btn btn-ghost border-0 outline-none hover:!bg-transparent focus:!bg-transparent active:!bg-transparent relative transition-colors duration-300 group after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-3/4">
+                    <span>Novedades</span>
+                </a>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="flex items-center gap-1">
+                <!-- Buscar en móvil -->
+                <button class="btn btn-ghost btn-circle md:hidden" aria-label="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                </button>
+
+                <!-- Favoritos -->
+                <button class="btn btn-ghost btn-circle relative" aria-label="Favoritos">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-heart-icon lucide-heart">
+                        <path
+                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                    </svg>
+                </button>
+
+                <!-- Carrito -->
+                <div class="dropdown dropdown-hover dropdown-bottom dropdown-end">
+                    <a routerLink="/carrito">
+                        <button class="btn btn-ghost btn-circle relative" aria-label="Carrito">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                                <circle cx="8" cy="21" r="1" />
+                                <circle cx="19" cy="21" r="1" />
+                                <path
+                                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                            </svg>
+                        </button>
+                    </a>
+                    <div tabindex="0"
+                        class="dropdown-content card card-sm bg-base-100 z-1 mt-0 w-120 shadow-xl border border-base-300">
+                        <div class="card-body p-4 gap-3">
+                            <div class="flex items-center justify-between">
+                                <p class="font-semibold text-base">Tu carrito</p>
+                                <div class="badge badge-sm badge-secondary px-2 py-2 rounded-full">+2</div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-3 rounded-lg bg-base-200 p-2">
+                                    <img src="https://img01.ztat.net/article/spp-media-p1/81091efbfa984d589657841a6d94ab47/70bf110e388a4e5883b9943d27d145a5.jpg?imwidth=1800&amp;filter=packshot"
+                                        alt="Nike Performance"
+                                        class="h-14 w-14 shrink-0 rounded-md object-cover bg-base-300" />
+                                    <div class="min-w-0 flex-1">
+                                        <p class="truncate text-sm font-medium">Nike Performance</p>
+                                        <p class="text-xs text-base-content/60">Off-white · Talla 42 · x1</p>
+                                    </div>
+                                    <p class="ml-auto text-right text-sm font-semibold whitespace-nowrap">109,95€</p>
+                                </div>
+
+                                <div class="flex items-center gap-3 rounded-lg bg-base-200 p-2">
+                                    <img src="https://img01.ztat.net/article/spp-media-p1/a6ea585606504969a4acc97223576c71/00ea77ec18224e5088b0889b75672c1b.jpg?imwidth=1800&amp;filter=packshot"
+                                        alt="Adidas Performance"
+                                        class="h-14 w-14 shrink-0 rounded-md object-cover bg-base-300" />
+                                    <div class="min-w-0 flex-1">
+                                        <p class="truncate text-sm font-medium">Adidas Performance</p>
+                                        <p class="text-xs text-base-content/60">White/Pink · Talla 38 · x1</p>
+                                    </div>
+                                    <p class="ml-auto text-right text-sm font-semibold whitespace-nowrap">54,95€</p>
+                                </div>
+                            </div>
+
+                            <div class="divider my-1"></div>
+
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-base-content/70">Subtotal</span>
+                                <span class="font-semibold">164,90€</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-1">
+                                <button type="button" routerLink="carrito"
+                                    class="btn bg-[var(--color-dark)] text-[var(--color-text)] border border-transparent btn-sm">Ver
+                                    carrito</button>
+                                <button type="button" routerLink="carrito"
+                                    class="btn btn-primary border border-transparent btn-sm">Pagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="btn btn-ghost btn-circle" type="button"
+                    [attr.aria-label]="themeService.isDark() ? 'Tema actual: oscuro' : 'Tema actual: claro'"
+                    (click)="themeService.toggleTheme()">
+                    <ng-container *ngIf="!themeService.isDark(); else darkThemeIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-sun-icon lucide-sun">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 3v1" />
+                            <path d="M12 20v1" />
+                            <path d="M3 12h1" />
+                            <path d="M20 12h1" />
+                            <path d="m18.364 5.636-.707.707" />
+                            <path d="m6.343 17.657-.707.707" />
+                            <path d="m5.636 5.636.707.707" />
+                            <path d="m17.657 17.657.707.707" />
+                        </svg>
+                    </ng-container>
+                    <ng-template #darkThemeIcon>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-moon-icon lucide-moon">
+                            <path
+                                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                        </svg>
+                    </ng-template>
+                </button>
+
+                <!-- Usuario -->
+                <div class="dropdown dropdown-end">
+                    <button tabindex="0" class="btn btn-ghost btn-circle avatar" aria-label="Cuenta">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-user-round-icon lucide-circle-user-round">
+                            <path d="M18 20a6 6 0 0 0-12 0" />
+                            <circle cx="12" cy="10" r="4" />
+                            <circle cx="12" cy="12" r="10" />
+                        </svg>
+                    </button>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-xl border-0">
+                        <li>
+                            <a class="py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-user-round-icon lucide-user-round">
+                                    <circle cx="12" cy="8" r="5" />
+                                    <path d="M20 21a8 8 0 0 0-16 0" />
+                                </svg>
+                                Mi Perfil
+                            </a>
+                        </li>
+                        <li>
+                            <a class="py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-package-icon lucide-package">
+                                    <path
+                                        d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+                                    <path d="M12 22V12" />
+                                    <polyline points="3.29 7 12 12 20.71 7" />
+                                    <path d="m7.5 4.27 9 5.15" />
+                                </svg>
+                                Mis Pedidos
+                            </a>
+                        </li>
+                        <li>
+                            <a class="py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+                                    <path
+                                        d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                </svg>
+                                Favoritos
+                            </a>
+                        </li>
+                        <div class="divider my-1"></div>
+                        <li>
+                            <a class="py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings">
+                                    <path
+                                        d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                                Configuración
+                            </a>
+                        </li>
+                        <li>
+                            <a class="py-3 text-error">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out">
+                                    <path d="m16 17 5-5-5-5" />
+                                    <path d="M21 12H9" />
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                                </svg>
+                                <strong>Cerrar Sesión</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,3 +1,92 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: vestis --default, vestis-dark;
+}
+
+@plugin "daisyui/theme" {
+    name: "vestis";
+    default: true;
+    prefersdark: false;
+    color-scheme: light;
+
+    --color-primary: #ea580c;
+    --color-primary-content: #ffffff;
+    --color-secondary: #f97316;
+    --color-secondary-content: #ffffff;
+    --color-accent: #fb923c;
+    --color-accent-content: #ffffff;
+    --color-neutral: #1f2937;
+    --color-base-100: #ffffff;
+    --color-base-200: #f3f4f6;
+    --color-base-300: #e5e7eb;
+    --color-marquee: #ffffff80;
+    --color-base-content: #1f2937;
+    --color-info: #3b82f6;
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-surface: #00000085;
+    --color-dark: #000000;
+    --color-text: #ffffff;
+}
+
+@plugin "daisyui/theme" {
+    name: "vestis-dark";
+    default: false;
+    prefersdark: false;
+    color-scheme: dark;
+
+    --color-primary: #ea580c;
+    --color-primary-content: #ffffff;
+    --color-secondary: #f97316;
+    --color-secondary-content: #ffffff;
+    --color-accent: #fb923c;
+    --color-accent-content: #ffffff;
+    --color-neutral: #111827;
+    --color-base-100: #111111;
+    --color-base-200: #111827;
+    --color-base-300: #1f2937;
+    --color-marquee: #ffffff80;
+    --color-base-content: #ffffff;
+    --color-info: #60a5fa;
+    --color-success: #4ade80;
+    --color-warning: #fbbf24;
+    --color-error: #f87171;
+    --color-surface: #ffffff86;
+    --color-dark: #FFFFFF;
+    --color-text: #000000;
+}
+
+@layer base {
+    @font-face {
+        font-family: "Montserrat";
+        src: url('../public/assets/fonts/Montserrat-Medium.ttf') format('truetype');
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@theme {
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-sans: "Montserrat", sans-serif;
+    --animate-fade-in: fadeIn 0.3s ease-in-out;
+}
