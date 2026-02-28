@@ -156,16 +156,18 @@
 
                 <!-- Carrito -->
                 <div class="dropdown dropdown-hover dropdown-bottom dropdown-end">
-                    <button class="btn btn-ghost btn-circle relative" aria-label="Carrito">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
-                            <circle cx="8" cy="21" r="1" />
-                            <circle cx="19" cy="21" r="1" />
-                            <path
-                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-                        </svg>
-                    </button>
+                    <a routerLink="/carrito">
+                        <button class="btn btn-ghost btn-circle relative" aria-label="Carrito">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                                <circle cx="8" cy="21" r="1" />
+                                <circle cx="19" cy="21" r="1" />
+                                <path
+                                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                            </svg>
+                        </button>
+                    </a>
                     <div tabindex="0"
                         class="dropdown-content card card-sm bg-base-100 z-1 mt-0 w-120 shadow-xl border border-base-300">
                         <div class="card-body p-4 gap-3">
@@ -206,10 +208,10 @@
                             </div>
 
                             <div class="grid grid-cols-2 gap-2 mt-1">
-                                <button type="button"
+                                <button type="button" routerLink="carrito"
                                     class="btn bg-[var(--color-dark)] text-[var(--color-text)] border border-transparent btn-sm">Ver
                                     carrito</button>
-                                <button type="button"
+                                <button type="button" routerLink="carrito"
                                     class="btn btn-primary border border-transparent btn-sm">Pagar</button>
                             </div>
                         </div>
